@@ -13,11 +13,11 @@
                  <a class="navbar-brand" href="#">
                      <img src="images/logo-banque/LOGOGBAF.png" width="40" height="40" alt="site logo">
                      GBAF - Groupement Banque Assurance Français</a>
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                      <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="navbarContent" class="collapse navbar-collapse">
-                 <!-- <ul  class="navbar-nav">
+                 <ul  class="navbar-nav">
                      <li class="nav-item active">
                          <a class="nav-link" href="index.html">Accueil</a>
                      </li>
@@ -31,7 +31,7 @@
            
         </div>
     </div>
-    <div class="container jumbotron">
+    <div class="container jumbotron présentation">
         <div class="row">
             <div class="col">
                 <h1 class="text-center">Présentation du Groupement Banque Assurance Français</h1>
@@ -53,33 +53,28 @@ les axes de la réglementation financière française. Sa mission est de promouv
 l'activité bancaire à l’échelle nationale. C’est aussi un interlocuteur privilégié des
 pouvoirs publics.</p>
             </div>
-        </div>            
+        </div> 
+</div>
+<div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">Les partenaires et financeurs</h2>
+                <p class="text-justify">Les produits et services bancaires sont nombreux et très variés. Le GBAF souhaite proposer aux salariés des grands groupes Français 
+                    un point d'entrée unique, répertoriant un grand nombre d'informations sur les partenaires et acteurs 
+                    du groupe ainsi que sur les produits et services bancaires et financiers.</p>
     </div>
-    <div class="container infocard-section">
+</div> 
+</div>          
+    </div>
+    <div class="container acteurs">
+        
         <div class="row">
             <div class="card col-12 ">
                 <div class="card-body">
-                    <h5 class="card-title">Titre de la carte</h5>
+                    <div class="col-md-6"><img src="images/logo-partenaire/CDE.png"class="img-fluid"  alt="Chambre des entrepreneurs"></div>
+                    <div class="col-md-6"><h3 class="card-title  text-center text-md-left">Chambre des entrepreneurs</h3></div>
                     <p class="card-text">Contenu textuel de la carte</p>
-                    </div>
-            </div>
-            <div class="card col-12">
-                <div class="card-body">
-                    <h5 class="card-title">Titre de la carte</h5>
-                    <p class="card-text">Contenu textuel de la carte</p>
-                    </div>
-            </div>
-            <div class="card col-12 ">
-                <div class="card-body">
-                    <h5 class="card-title">Titre de la carte</h5>
-                    <p class="card-text">Contenu textuel de la carte</p>
-                    </div>
-            </div>
-            <div class="card col-12 ">
-                <div class="card-body">
-                    <h5 class="card-title">Titre de la carte</h5>
-                    <p class="card-text">Contenu textuel de la carte</p>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
