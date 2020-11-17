@@ -10,9 +10,10 @@
         <div class="row">
             
              <nav class="col navbar navbar-expand-lg bg-light navbar-light">
-                 <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.php">
                      <img src="images/logo-banque/LOGOGBAF.png" width="40" height="40" alt="site logo">
-                     GBAF - Groupement Banque Assurance Français</a>
+                     GBAF - Groupement Banque Assurance Français
+                </a>
                  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                      <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,6 +32,7 @@
            
         </div>
     </div>
+    <!-- début partie présentation -->
     <div class="container jumbotron présentation">
         <div class="row">
             <div class="col">
@@ -40,6 +42,7 @@
         <div class="row">
             <div class="col description">
                 <p class="text-justify">Le Groupement Banque Assurance Français (GBAF) est une fédération représentant les 6 grand groupes Français:</p>
+                <!-- début de liste des groupes bancaires FR -->
                 <ul class="list-group list-group-horizontal ">
                     <li class="list-group-item col-2"><img src="images/logo-banque/bnp.png" class="img-fluid" alt="BNP Paribas"></li>
                     <li class="list-group-item col-2"><img src="images/logo-banque/BPCE.png" class="img-fluid" alt="BPCE"></li>
@@ -48,6 +51,7 @@
                     <li class="list-group-item col-2"><img src="images/logo-banque/SocGen.jpg" class="img-fluid" alt="Société générale"></li>
                     <li class="list-group-item col-2"><img src="images/logo-banque/postale.jpg" class="img-fluid" alt="La banque postale"></li>
                 </ul>
+                <!-- fin de liste des groupes bancaires FR -->
                 <p class="text-justify">Le GBAF est le représentant de la profession bancaire et des assureurs sur tous
 les axes de la réglementation financière française. Sa mission est de promouvoir
 l'activité bancaire à l’échelle nationale. C’est aussi un interlocuteur privilégié des
@@ -55,6 +59,8 @@ pouvoirs publics.</p>
             </div>
         </div> 
     </div>
+    <!-- fin partie présentation-->
+    <!-- Début partie acteurs-->
     <div class="container">
         <div class="row">
             <div class="col">
@@ -71,16 +77,16 @@ pouvoirs publics.</p>
             <!--Début de carte acteur -->
             <div class="card col-12 ">
                 <div class="row ">
-                    <div class="col-12 col-md-4 col-lg-2">
+                <div class="col-12 col-md-4 col-lg-2 align-self-center">
                         <img src="images/logo-partenaire/CDE.png" class="img-fluid" alt="chambre des entrepreneurs logo">
                     </div>
-                    <div class="col-12 col-md-8 col-lg-8 ">
+                    <div class="card-body col-12 col-md-8 col-lg-8 ">
                         <h3 class="text-align">Chambre des entrepreneurs</h3>
                         <p class="text-justify">La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
 Son président est élu pour 3 ans par ses pairs, chefs d’entreprises et présidents des CDE.</p>
                     </div>
-                    <div class="col-12 col-lg-2 ">
-                        <button type="button" class="btn btn-outline-info">Lire la suite</button>
+                    <div class="col-12 col-lg-2 text-right align-self-end">
+                        <button type="button" class="btn btn-outline-info ">Lire la suite</button>
                     </div>
                 </div>
             </div>
@@ -88,15 +94,15 @@ Son président est élu pour 3 ans par ses pairs, chefs d’entreprises et prés
                  <!--Début de carte acteur -->
             <div class="card col-12 ">
                 <div class="row ">
-                    <div class="col-12 col-md-4 col-lg-2">
+                <div class="col-12 col-md-4 col-lg-2 align-self-center ">
                         <img src="images/logo-partenaire/formation_co.png" class="img-fluid" alt="Formation&co logo">
                     </div>
-                    <div class="col-12 col-md-8 col-lg-8 ">
+                    <div class="card-body col-12 col-md-8 col-lg-8 ">
                         <h3 class="text-align">Formation&co</h3>
                         <p class="text-justify">Formation&co est une association française présente sur tout le territoire.
 Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé.</p>
                     </div>
-                    <div class="col-12 col-lg-2 ">
+                    <div class="col-12 col-lg-2 text-right align-self-end">
                     <button type="button" class="btn btn-outline-info">Lire la suite</button>
                     </div>
                 </div>
@@ -105,17 +111,17 @@ Nous proposons à des personnes issues de tout milieu de devenir entrepreneur gr
              <!--Début de carte acteur -->
              <div class="card col-12 ">
                 <div class="row ">
-                    <div class="col-12 col-md-4 col-lg-2">
+                <div class="col-12 col-md-4 col-lg-2 align-self-center">
                         <img src="images/logo-partenaire/Dsa_france.png" class="img-fluid" alt="DSA France logo">
                     </div>
-                    <div class="col-12 col-md-8 col-lg-8 ">
+                    <div class="card-body col-12 col-md-8 col-lg-8 ">
                         <h3 class="text-align">DSA France</h3>
                         <p class="text-justify">Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
 Nous accompagnons les entreprises dans les étapes clés de leur évolution.
 Notre philosophie : s’adapter à chaque entreprise.
 Nous les accompagnons pour voir plus grand et plus loin et proposons des solutions de financement adaptées à chaque étape de la vie des entreprises</p>
                     </div>
-                    <div class="col-12 col-lg-2 ">
+                    <div class="col-12 col-lg-2 text-right align-self-end">
                     <button type="button" class="btn btn-outline-info">Lire la suite</button>
                     </div>
                 </div>
@@ -124,16 +130,16 @@ Nous les accompagnons pour voir plus grand et plus loin et proposons des solutio
              <!--Début de carte acteur -->
              <div class="card col-12 ">
                 <div class="row ">
-                    <div class="col-12 col-md-4 col-lg-2">
-                        <img src="images/logo-partenaire/protectpeople.png" class="img-fluid" alt="Protectpeople">
+                    <div class="col-12 col-md-4 col-lg-2 align-self-center">
+                        <img src="images/logo-partenaire/protectpeople.png" class="img-fluid " alt="Protectpeople">
                     </div>
-                    <div class="col-12 col-md-8 col-lg-8 ">
+                    <div class="card-body col-12 col-md-8 col-lg-8 ">
                         <h3 class="text-align">Protectpeople</h3>
                         <p class="text-justify">Protectpeople finance la solidarité nationale.
 Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale.</p>
                     </div>
-                    <div class="col-12 col-lg-2 ">
-                    <button type="button" class="btn btn-outline-info">Lire la suite</button>
+                    <div class="col-12 col-lg-2 text-right align-self-end">
+                    <button type="button" class="btn btn-outline-info ">Lire la suite</button>
                     </div>
                 </div>
             </div>
@@ -141,13 +147,17 @@ Nous appliquons le principe édifié par la Sécurité sociale française en 194
             </div>
         </div>
     </div>
-    <div class="container footer bg-dark text-light">
+    <!-- fin partie acteurs -->
+   <!-- début footer -->
+    <div class="container footer bg-dark text-light ">
         <div class="row">
             <div class="col">
                 <p class="text-center">Mentions légales | Contacts</p>
             </div>
         </div>
     </div>
+    <!-- fin footer -->
+
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
