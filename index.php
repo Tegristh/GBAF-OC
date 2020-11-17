@@ -11,7 +11,7 @@
             
              <nav class="col navbar navbar-expand-lg bg-light navbar-light">
                  <a class="navbar-brand" href="#">
-                     <img src="images/LOGOGBAF.png" width="40" height="40" alt="site logo">
+                     <img src="images/logo-banque/LOGOGBAF.png" width="40" height="40" alt="site logo">
                      GBAF - Groupement Banque Assurance Français</a>
                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                      <span class="navbar-toggler-icon"></span>
@@ -33,39 +33,49 @@
     </div>
     <div class="container jumbotron">
         <div class="row">
-            <div class="col title">
-                <h1>Présentation du Groupement Banque Assurance Français</h1>
+            <div class="col">
+                <h1 class="text-center">Présentation du Groupement Banque Assurance Français</h1>
             </div>
         </div>
         <div class="row">
             <div class="col description">
-                <p>Le Le Groupement Banque Assurance Français (GBAF) est une fédération représentant les 6 grand groupes Français:</p>
-                <ul>
-                    <li>BNP Paribas;</li>
-                    <li>BPCE;</li>
-                    <li>Crédit Agricole;</li>
-                    <li>Crédit Mutuel-CIC;</li>
-                    <li>Société Générale;</li>
-                    <li>La Banque Postale.</li>
+                <p class="text-justify">Le Groupement Banque Assurance Français (GBAF) est une fédération représentant les 6 grand groupes Français:</p>
+                <ul class="list-group list-group-horizontal ">
+                    <li class="list-group-item col-2"><img src="images/logo-banque/bnp.png" class="img-fluid" alt="BNP Paribas"></li>
+                    <li class="list-group-item col-2"><img src="images/logo-banque/BPCE.png" class="img-fluid" alt="BPCE"></li>
+                    <li class="list-group-item col-2"><img src="images/logo-banque/CA.jpg" class="img-fluid" alt="Crédit Agricole"></li>
+                    <li class="list-group-item col-2"><img src="images/logo-banque/CM-CIC.png" class="img-fluid" alt="Crédit mutuel CIC"></li>
+                    <li class="list-group-item col-2"><img src="images/logo-banque/SocGen.jpg" class="img-fluid" alt="Société générale"></li>
+                    <li class="list-group-item col-2"><img src="images/logo-banque/postale.jpg" class="img-fluid" alt="La banque postale"></li>
                 </ul>
+                <p class="text-justify">Le GBAF est le représentant de la profession bancaire et des assureurs sur tous
+les axes de la réglementation financière française. Sa mission est de promouvoir
+l'activité bancaire à l’échelle nationale. C’est aussi un interlocuteur privilégié des
+pouvoirs publics.</p>
             </div>
         </div>            
     </div>
     <div class="container infocard-section">
         <div class="row">
-            <div class="card col-12 col-lg-4">
+            <div class="card col-12 ">
                 <div class="card-body">
                     <h5 class="card-title">Titre de la carte</h5>
                     <p class="card-text">Contenu textuel de la carte</p>
                     </div>
             </div>
-            <div class="card col-12 col-lg-4">
+            <div class="card col-12">
                 <div class="card-body">
                     <h5 class="card-title">Titre de la carte</h5>
                     <p class="card-text">Contenu textuel de la carte</p>
                     </div>
             </div>
-            <div class="card col-12 col-lg-4">
+            <div class="card col-12 ">
+                <div class="card-body">
+                    <h5 class="card-title">Titre de la carte</h5>
+                    <p class="card-text">Contenu textuel de la carte</p>
+                    </div>
+            </div>
+            <div class="card col-12 ">
                 <div class="card-body">
                     <h5 class="card-title">Titre de la carte</h5>
                     <p class="card-text">Contenu textuel de la carte</p>
@@ -73,10 +83,10 @@
             </div>
         </div>
     </div>
-    <div class="container footer">
+    <div class="container footer bg-dark text-light">
         <div class="row">
             <div class="col">
-                <p>legals | contacts</p>
+                <p class="text-center">Mentions légales | Contacts</p>
             </div>
         </div>
     </div>
