@@ -16,6 +16,7 @@ plan/fonctionnalités prévues:
 	--confirm mdp
 	--question secrete
 	--réponse à question secrete
+	--Acceptation cookie (rgpd)
 	
 -changer le mot de passe --> question secrete --> nouveau mot de passe
 
