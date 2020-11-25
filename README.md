@@ -8,6 +8,8 @@ plan/fonctionnalités prévues:
 -connexion:
 	--user
 	--password
+	--rester connecté (cookie 30 jours)
+	
 -inscription:
 	--Nom
 	--Prenom

@@ -1,3 +1,4 @@
+<?php include('private/appelbdd.php'); ?>
 <?php include('Head.php'); ?>
     
     <!-- début partie présentation -->
@@ -45,7 +46,7 @@ pouvoirs publics.</p>
             <!-- Début de carte acteur -->
             <div class="card col-12 ">
                 <div class="row ">
-                <div class="col-12 col-md-4 col-lg-2 align-self-center ">
+                    <div class="col-12 col-md-4 col-lg-2 align-self-center ">
                         <img src="images/logo-partenaire/formation_co.png" class="img-fluid" alt="Formation&co logo">
                     </div>
                     <div class="card-body col-12 col-md-8 col-lg-8 ">
@@ -66,7 +67,7 @@ Nous proposons à des personnes issues de tout milieu de devenir entrepreneur gr
             <!-- Début de carte acteur -->
             <div class="card col-12 ">
                 <div class="row ">
-                <div class="col-12 col-md-4 col-lg-2 align-self-center">
+                    <div class="col-12 col-md-4 col-lg-2 align-self-center">
                         <img src="images/logo-partenaire/CDE.png" class="img-fluid" alt="chambre des entrepreneurs logo">
                     </div>
                     <div class="card-body col-12 col-md-8 col-lg-8 ">

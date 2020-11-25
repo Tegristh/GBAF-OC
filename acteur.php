@@ -1,4 +1,4 @@
-<?php include('Head-large.php'); ?>
+<?php include('Head.php'); ?>
         <!-- Début présentation de l'acteur -->
         <div class="container jumbotron">
            <!-- Début image de l'acteur-->
