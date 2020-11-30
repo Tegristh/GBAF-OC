@@ -1,46 +1,34 @@
 <?php 
-$nom_page= 'acteur test'; 
+include('autoload.php'); 
+include('bdd_connect.php');
+//$acteur_id = $_GET['acteur'];
+$req = $bdd->prepare('SELECT * FROM acteur WHERE id_acteur = :acteur_id');
+$req->execute(array('acteur_id' => $_GET['acteur']));
+$donnees = $req->fetch();
+
+$nom_page= $donnees['acteur']; 
 include('Head.php'); ?>
         <!-- Début présentation de l'acteur -->
         <div class="container jumbotron">
            <!-- Début image de l'acteur-->
             <div class="row">
                 <div class="col ">
-                    <img src="images/logo-partenaire/formation_co.png" class="img-fluid" alt="Chambre des entrepreneurs logo">
+                <?php echo '<img class="img-fluid" src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
                 </div>
             </div>
             <!-- Fin image de l'acteur -->
             <div class="row">
                 <!-- Début Titre H2-->
                 <div class="col">
-                    <h2>Formation&co</h2>
+                    <h2><?php echo $donnees['acteur'] ?></h2>
                 </div>
             </div>
                 <!-- Fin de titre H2 -->
-                <!-- Lien -->
-            <div class="row">
-                <div class="col-12 col-lg-2  ">
-                    <a href="#">
-                        <button type="button" class="btn btn-outline-primary">
-                        visiter
-                        </button>
-                    </a>        
-                </div>
-            </div>
-            <!-- lien fin -->
+               
             <!-- contenu textuel -->
             <div class="row">
                 <div class="text-justify">
-                    <p class="text-justify">Formation&co est une association française présente sur tout le territoire.
-                    Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé.</p>
-                    <p>Notre proposition :</p>
-                    <ul>
-                        <li>un financement jusqu’à 30 000€ ;</li>
-                        <li>un suivi personnalisé et gratuit ;</li>
-                        <li>une lutte acharnée contre les freins sociétaux et les stéréotypes.</li>
-                    </ul> 
-                    <p class="text-justify">Le financement est possible, peu importe le métier : coiffeur, banquier, éleveur de chèvres… . Nous collaborons avec des personnes talentueuses et motivées.
-                    Vous n’avez pas de diplômes ? Ce n’est pas un problème pour nous ! Nos financements s’adressent à tous.</p>
+                <?php echo $donnees['description'] ?>
                 </div>
             </div>
         </div>

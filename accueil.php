@@ -58,7 +58,7 @@ pouvoirs publics.</p>
             <div class="card col-12 ">
                 <div class="row ">
                     <div class="col-12 col-md-4 col-lg-2 align-self-center ">
-                        <?php echo 'http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo']; ?>
+                        <?php echo '<img class="img-fluid" src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
                     </div>
                     <div class="card-body col-12 col-md-8 col-lg-8 ">
                         <h3 class="text-align"><?php echo $donnees['acteur'] ?></h3>
