@@ -18,12 +18,12 @@ include('Head.php');
                 <p class="text-justify">Le Groupement Banque Assurance Français (GBAF) est une fédération représentant les 6 grand groupes Français:</p>
                 <!-- début de liste des groupes bancaires FR -->
                 <ul class="list-group list-group-horizontal ">
-                    <li class="list-group-item col-2"><img src="images/logo-banque/bnp.png" class="img-fluid" alt="BNP Paribas"></li>
-                    <li class="list-group-item col-2"><img src="images/logo-banque/BPCE.png" class="img-fluid" alt="BPCE"></li>
-                    <li class="list-group-item col-2"><img src="images/logo-banque/CA.jpg" class="img-fluid" alt="Crédit Agricole"></li>
-                    <li class="list-group-item col-2"><img src="images/logo-banque/CM-CIC.png" class="img-fluid" alt="Crédit mutuel CIC"></li>
-                    <li class="list-group-item col-2"><img src="images/logo-banque/SocGen.jpg" class="img-fluid" alt="Société générale"></li>
-                    <li class="list-group-item col-2"><img src="images/logo-banque/postale.jpg" class="img-fluid" alt="La banque postale"></li>
+                    <li class="list-group-item col-2"><img src="http://gbaf.tegristh.fr/img/bq/01.png" class="img-fluid" alt="BNP Paribas"></li>
+                    <li class="list-group-item col-2"><img src="http://gbaf.tegristh.fr/img/bq/02.png" class="img-fluid" alt="BPCE"></li>
+                    <li class="list-group-item col-2"><img src="http://gbaf.tegristh.fr/img/bq/03.jpg" class="img-fluid" alt="Crédit Agricole"></li>
+                    <li class="list-group-item col-2"><img src="http://gbaf.tegristh.fr/img/bq/04.png" class="img-fluid" alt="Crédit mutuel CIC"></li>
+                    <li class="list-group-item col-2"><img src="http://gbaf.tegristh.fr/img/bq/05.jpg" class="img-fluid" alt="Société générale"></li>
+                    <li class="list-group-item col-2"><img src="http://gbaf.tegristh.fr/img/bq/06.jpg" class="img-fluid" alt="La banque postale"></li>
                 </ul>
                 <!-- fin de liste des groupes bancaires FR -->
                 <p class="text-justify">Le GBAF est le représentant de la profession bancaire et des assureurs sur tous
@@ -58,7 +58,7 @@ pouvoirs publics.</p>
             <div class="card col-12 ">
                 <div class="row ">
                     <div class="col-12 col-md-4 col-lg-2 align-self-center ">
-                        <?php echo 'images/logo-partenaire/'.$donnees['acteur'].'.'.$donnees['logo']; ?>
+                        <?php echo 'http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo']; ?>
                     </div>
                     <div class="card-body col-12 col-md-8 col-lg-8 ">
                         <h3 class="text-align"><?php echo $donnees['acteur'] ?></h3>

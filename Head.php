@@ -10,7 +10,7 @@
         <div class="row">            
              <nav class="col navbar navbar-expand-lg bg-light navbar-light">
                 <a class="navbar-brand" href="accueil.php">
-                     <img src="images/logo-banque/LOGOGBAF.png" width="40" height="40" alt="site logo">
+                     <img src="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png" width="40" height="40" alt="site logo">
                      <?php echo $nom_page .' '; ?> - GBAF - Groupement Banque Assurance Français
                 </a>
                  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
