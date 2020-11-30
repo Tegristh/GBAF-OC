@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-    <title>Accueil - GBAF - Groupement Banque Assurance Français</title>
+    <title><?php echo $nom_page.' '; ?> - GBAF - Groupement Banque Assurance Français</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="styles/default.css" rel="stylesheet">
     <meta charset="utf8" langue="fr">
@@ -9,9 +9,9 @@
     <div class="container header">
         <div class="row">            
              <nav class="col navbar navbar-expand-lg bg-light navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="accueil.php">
                      <img src="images/logo-banque/LOGOGBAF.png" width="40" height="40" alt="site logo">
-                     GBAF - Groupement Banque Assurance Français
+                     <?php echo $nom_page .' '; ?> - GBAF - Groupement Banque Assurance Français
                 </a>
                  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                      <span class="navbar-toggler-icon"></span>

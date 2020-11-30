@@ -1,4 +1,6 @@
-<?php include('Head.php'); ?>
+<?php 
+$nom_page= 'acteur test'; 
+include('Head.php'); ?>
         <!-- Début présentation de l'acteur -->
         <div class="container jumbotron">
            <!-- Début image de l'acteur-->
