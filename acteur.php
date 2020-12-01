@@ -40,7 +40,7 @@ include('Head.php'); ?>
         <div class="container main border">
             <!-- compteur de commentaires -->
             <div class="row">
-                <div class="col-6">
+                <div class="col-3">
                 <?php 
                 $reponse = $bdd->prepare('SELECT COUNT(*) AS nb_commentaires FROM post WHERE id_acteur = :acteur_id');
                 $reponse->execute(array('acteur_id'=>$_GET['acteur']));
@@ -54,6 +54,14 @@ include('Head.php'); ?>
                     <button type="button" class="btn btn-outline-secondary">
                         Laisser un commentaire
                     </button>
+                </div>
+                <div class="col-3">
+                <?php
+                $satisfaction = $bdd->prepare('SELECT AVG (vote) as vote_moyen FROM vote WHERE id_acteur = :acteur_id');
+                $satisfaction->execute(array('acteur_id'=>$_GET['acteur']));
+                $note = $satisfaction->fetch();
+                echo '<p>'.($note['vote_moyen']*100).'% de satisfaction</p>';
+                ?>
                 </div>
                 <!-- groupe de boutons et nombre de +/- -->
                 <div class="btn-group col-3 align-self-center" role="social" aria-label="Caesar-choice">
