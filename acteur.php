@@ -42,11 +42,11 @@ include('Head.php'); ?>
             <div class="row">
                 <div class="col-3">
                 <?php 
-                $reponse = $bdd->prepare('SELECT COUNT(*) AS nb_commentaires FROM post WHERE id_acteur = :acteur_id');
-                $reponse->execute(array('acteur_id'=>$_GET['acteur']));
-                $count = $reponse->fetch();
+                $nb_commentaires = $bdd->prepare('SELECT COUNT(*) AS nb_commentaires FROM post WHERE id_acteur = :acteur_id');
+                $nb_commentaires->execute(array('acteur_id'=>$_GET['acteur']));
+                $comment_count = $nb_commentaires->fetch();
 
-                echo '<p>'.$count['nb_commentaires'].' Commentaires</p>'; 
+                echo '<p>'.$comment_count['nb_commentaires'].' Commentaires</p>'; 
                 ?>
                 </div>
                 <!-- bouton pour commenter -->
@@ -57,10 +57,15 @@ include('Head.php'); ?>
                 </div>
                 <div class="col-3">
                 <?php
+                $nb_votes = $bdd->prepare('SELECT COUNT(*) AS nb_votes FROM vote WHERE id_acteur = :acteur_id');
+                $nb_votes->execute(array('acteur_id'=>$_GET['acteur']));
+                $vote_count = $nb_votes->fetch();
+
                 $satisfaction = $bdd->prepare('SELECT AVG (vote) as vote_moyen FROM vote WHERE id_acteur = :acteur_id');
                 $satisfaction->execute(array('acteur_id'=>$_GET['acteur']));
                 $note = $satisfaction->fetch();
-                echo '<p>'.($note['vote_moyen']*100).'% de satisfaction</p>';
+                echo '<p>'.($note['vote_moyen']*100).'% d\'utilisateurs satisfaits <br/>'.$vote_count['nb_votes'].' votes exprimés </p>';
+               
                 ?>
                 </div>
                 <!-- groupe de boutons et nombre de +/- -->
@@ -77,11 +82,11 @@ include('Head.php'); ?>
                     <div class="card">
                     <div class="row">
                     <?php
-                    if ($count['nb_commentaires'] == 0 ) {
+                    if ($comment_count['nb_commentaires'] == 0 ) {
                         echo '<div class="col-12"><p class="text-center">Pas encore de commentaires pour cet acteur, mais n\'hésitez pas à en laisser un!</p></div>';
                     }
                     else {
-                        $requete = $bdd->prepare('SELECT * FROM post WHERE id_acteur = :acteur_id ORDER BY date_add DESC LIMIT 0, 10');
+                        $requete = $bdd->prepare('SELECT id_post, id_user, id_acteur, DATE_FORMAT(date_add, \'%d/%m/%Y\') AS date, post FROM post WHERE id_acteur = :acteur_id ORDER BY date_add DESC LIMIT 0, 10');
                         $requete->execute(array('acteur_id'=>$_GET['acteur']));
                         while ($commentaires = $requete->fetch()) {
                             $postAuteur=$commentaires['id_user'];
@@ -93,7 +98,7 @@ include('Head.php'); ?>
                                 $auteur->execute(array('user_id'=>$postAuteur));
                                 $pseudo = $auteur->fetch();
                                 ?>
-                                <p>Le <?php echo $commentaires['date_add'].' ';
+                                <p>Le <?php echo $commentaires['date'].' ';
                                 echo $pseudo['username'].' à écrit:</p>';
 
                                 ?>
