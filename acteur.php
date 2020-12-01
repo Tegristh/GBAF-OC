@@ -13,7 +13,7 @@ include('Head.php'); ?>
            <!-- Début image de l'acteur-->
             <div class="row">
                 <div class="col ">
-                <?php echo '<img class="img-fluid" src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
+                <?php echo '<img class="img-fluid text-center" src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
                 </div>
             </div>
             <!-- Fin image de l'acteur -->
@@ -33,12 +33,21 @@ include('Head.php'); ?>
             </div>
         </div>
         <!-- Fin contenu textuel -->
-        <!-- début partie sociale -->
+        <!-- Fin présentation de l'acteur -->
+
+
+        <!-- début partie commentaires/notes -->
         <div class="container main border">
             <!-- compteur de commentaires -->
             <div class="row">
                 <div class="col-6">
-                    <p>X - Commentaires</p>
+                <?php 
+                $reponse = $bdd->prepare('SELECT COUNT(*) AS nb_commentaires FROM post WHERE id_acteur = :acteur_id');
+                $reponse->execute(array('acteur_id'=>$_GET['acteur']));
+                $count = $reponse->fetch();
+
+                echo '<p>'.$count['nb_commentaires'].' Commentaires</p>'; 
+                ?>
                 </div>
                 <!-- bouton pour commenter -->
                 <div class="col-3">
@@ -59,34 +68,44 @@ include('Head.php'); ?>
                     <!-- Une carte votée + -->
                     <div class="card">
                     <div class="row">
-                        <div class="col-1">
-                            <button type="button" class="btn btn-success rounded-circle">+</button>
-                        </div>
-                        <div class="col-2">
-                            <p>Prénom</p>
-                            <p>Date</p>
+                    <?php
+                    if ($count['nb_commentaires'] == 0 ) {
+                        echo '<div class="col-12"><p class="text-center">Pas encore de commentaires pour cet acteur, mais n\'hésitez pas à en laisser un!</p></div>';
+                    }
+                    else {
+                        $requete = $bdd->prepare('SELECT * FROM post WHERE id_acteur = :acteur_id ORDER BY date_add DESC LIMIT 0, 10');
+                        $requete->execute(array('acteur_id'=>$_GET['acteur']));
+                        while ($commentaires = $requete->fetch()) {
+                            $postAuteur=$commentaires['id_user'];
+                            ?>
+                            <div class="col-2">
+                                
+                                <?php
+                                $auteur = $bdd->prepare('SELECT username FROM account WHERE id_user = :user_id');
+                                $auteur->execute(array('user_id'=>$postAuteur));
+                                $pseudo = $auteur->fetch();
+                                ?>
+                                <p>Le <?php echo $commentaires['date_add'].' ';
+                                echo $pseudo['username'].' à écrit:</p>';
+
+                                ?>
+                            </div>
+                            <div class="col-10 text-justify">
+                                <p><?php echo $commentaires['post']; ?></p>
+                            </div>
+                            <?php
+                        }
+                    }
+                   ?> 
+                        
+                        
                        
-                        </div>
-                        <div class="col-9 text-justify">
-                            <p>test + </p>
-                        </div>
+                       
+                        
                     </div>
                 </div>
-                    <!-- Une carte votée - -->
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-1">
-                                <button type="button" class="btn btn-danger rounded-circle">-</button>
-                            </div>
-                            <div class="col-2">
-                                <p>Prénom</p>
-                                <p>Date</p>
-                            </div>
-                            <div class="col-9 text-justify">
-                                <p>test - </p>
-                            </div>
-                        </div>
-                    </div>
+                   
+                   
                 </div>
             </div>
                     
@@ -95,4 +114,4 @@ include('Head.php'); ?>
                 </div>
             </div>
         </div>
-   <?php include('footer.php') ?>
+   <?php include('footer.php'); ?>
