@@ -74,6 +74,7 @@ pouvoirs publics.</p>
                 </div>
             </div>
            <?php }
+           $reponse->closeCursor();
             ?>
             <!-- fin de carte acteur -->
             

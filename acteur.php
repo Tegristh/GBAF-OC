@@ -24,7 +24,7 @@ include('Head.php'); ?>
                 </div>
             </div>
                 <!-- Fin de titre H2 -->
-               
+              <?php $req->closeCursor(); ?> 
             <!-- contenu textuel -->
             <div class="row">
                 <div class="text-justify">
@@ -46,7 +46,7 @@ include('Head.php'); ?>
                 $nb_commentaires->execute(array('acteur_id'=>$_GET['acteur']));
                 $comment_count = $nb_commentaires->fetch();
 
-                echo '<p>'.$comment_count['nb_commentaires'].' Commentaires</p>'; 
+                echo '<p class="text-left align-middle">'.$comment_count['nb_commentaires'].' Commentaires</p>'; 
                 ?>
                 </div>
                 <!-- bouton pour commenter -->
@@ -55,7 +55,7 @@ include('Head.php'); ?>
                         Laisser un commentaire
                     </button>
                 </div>
-                <div class="col-3">
+                <div class="col-3 text-justify">
                 <?php
                 $nb_votes = $bdd->prepare('SELECT COUNT(*) AS nb_votes FROM vote WHERE id_acteur = :acteur_id');
                 $nb_votes->execute(array('acteur_id'=>$_GET['acteur']));
@@ -64,7 +64,7 @@ include('Head.php'); ?>
                 $satisfaction = $bdd->prepare('SELECT AVG (vote) as vote_moyen FROM vote WHERE id_acteur = :acteur_id');
                 $satisfaction->execute(array('acteur_id'=>$_GET['acteur']));
                 $note = $satisfaction->fetch();
-                echo '<p>'.($note['vote_moyen']*100).'% d\'utilisateurs satisfaits <br/>'.$vote_count['nb_votes'].' votes exprimés </p>';
+                echo '<p>'.round($note['vote_moyen']*100).'% d\'utilisateurs satisfaits <br/>'.$vote_count['nb_votes'].' votes exprimés </p>';
                
                 ?>
                 </div>
@@ -77,7 +77,11 @@ include('Head.php'); ?>
                 </div>
             </div>
             <div class="container">
-                
+                <div class="row">
+                <div class="col">
+                <p> 10 derniers commentaires: </p>
+                </div>
+                </div>
                     <!-- Une carte votée + -->
                     <div class="card">
                     <div class="row">
@@ -86,12 +90,12 @@ include('Head.php'); ?>
                         echo '<div class="col-12"><p class="text-center">Pas encore de commentaires pour cet acteur, mais n\'hésitez pas à en laisser un!</p></div>';
                     }
                     else {
-                        $requete = $bdd->prepare('SELECT id_post, id_user, id_acteur, DATE_FORMAT(date_add, \'%d/%m/%Y\') AS date, post FROM post WHERE id_acteur = :acteur_id ORDER BY date_add DESC LIMIT 0, 10');
+                        $requete = $bdd->prepare('SELECT id_post, id_user, id_acteur, DATE_FORMAT(date_add, \'%d/%m/%Y\') AS date, post FROM post WHERE id_acteur = :acteur_id ORDER BY id_post DESC LIMIT 0, 10');
                         $requete->execute(array('acteur_id'=>$_GET['acteur']));
                         while ($commentaires = $requete->fetch()) {
                             $postAuteur=$commentaires['id_user'];
                             ?>
-                            <div class="col-2">
+                            <div class="col-4 ">
                                 
                                 <?php
                                 $auteur = $bdd->prepare('SELECT username FROM account WHERE id_user = :user_id');
@@ -99,11 +103,11 @@ include('Head.php'); ?>
                                 $pseudo = $auteur->fetch();
                                 ?>
                                 <p>Le <?php echo $commentaires['date'].' ';
-                                echo $pseudo['username'].' à écrit:</p>';
+                                echo '<strong>'.$pseudo['username'].'</strong> a écrit:</p>';
 
                                 ?>
                             </div>
-                            <div class="col-10 text-justify">
+                            <div class="col-8 text-justify">
                                 <p><?php echo $commentaires['post']; ?></p>
                             </div>
                             <?php
