@@ -1,33 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
-    <title><?php echo $nom_page.' '; ?> - Groupement Banque Assurance Français</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="styles/default.css" rel="stylesheet">
-    <meta charset="utf8" langue="fr">
+<title>test flexbox</title>
+<link rel="shortcut icon" type="image/png" href="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png"/>
+<link href="styles/default.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/eb85e4a2ad.js" crossorigin="anonymous"></script>
+<meta charset="utf8" langue="fr">
 </head>
 <body>
-    <div class="container header">
-        <div class="row">            
-             <nav class="col navbar navbar-expand-lg bg-light navbar-light">
-                <a class="navbar-brand" href="accueil.php">
-                     <img src="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png" width="40" height="40" alt="site logo">
-                     <?php echo $nom_page .' '; ?> - Groupement Banque Assurance Français
-                </a>
-                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="navbarContent" class="collapse navbar-collapse">
-                 <ul  class="navbar-nav">
-                     <li class="nav-item active">
-                         <a class="nav-link" href="index.html">Accueil</a>
-                     </li>
-                     <li class="nav-item">
-                         <a class="nav-link" href="#">Cours</a>
-                     </li>
-                 </ul> -->
-                </div>
-             </nav>                                  
-            
-           
+    <div class="main-content">
+        <header>
+        <div class="logo">
+            <a class="navbar-brand" href="accueil.php">
+                <img src="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png" width="40" height="51" alt="site logo">
+            </a>
         </div>
-    </div>
+        <div class="user">
+            <div class="awesome-user">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="identity-user">
+                Nom & Prénom
+            </div>
+
+        </div>
+        </header>

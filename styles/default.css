@@ -1,0 +1,137 @@
+body {
+    background-color:#191919 ;
+    color:#FFFFFF;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+}
+.main-content {
+    min-width: 0;
+    max-width: 800px;
+    min-height:0;
+    display:flex;
+    flex-direction:column;
+       
+    }
+h2 {
+    color:#ff6666;
+    text-align: center;
+   
+   
+} 
+h3 {
+    color:#ff6666;
+    text-align: center;
+  
+    }
+
+.justify {
+    margin: 10px;
+    text-align: justify;
+}
+header {
+    display:flex;
+    flex-direction:row;
+    font-size: 21px;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #212121;
+    margin-bottom:5px;
+}
+header div {
+    margin: 20px;
+}
+.user {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.user div {
+    margin:10px;
+}
+.presentation  {
+   padding: 5px;
+   margin: 10px 0 10px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212121;
+}
+.presentation div {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+}
+ul {
+    display:flex;
+    
+    align-items: center;
+    justify-content:center;
+   list-style-type:none;
+   margin:0;
+   padding:0;  
+}
+li {
+    margin-left:3px;   
+}
+ul li img {
+    min-width: 0;
+    min-height: 0;
+    max-width: 120px;    
+    max-height: 120px;
+}
+.acteur-liste {
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+      
+}
+.acteur-liste div{
+    
+    background-color: #212121;
+}
+.acteur-carte{
+    display:flex;
+    flex-direction: column ;    
+    justify-content: center;
+    border:#FFFFFF;
+}
+.acteur-carte div{
+    display:flex;
+    flex-wrap: nowrap;    
+    margin: 10px;
+    background-color: #191919;
+}
+.acteur-logo{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.acteur-logo img{
+    max-width:250px; 
+    min-width: 0px;   
+  }
+.acteur-texte {
+    display:flex;   
+    flex-direction: column;
+}
+.button{
+    
+    align-self: flex-end;
+    justify-self: flex-end;
+    border-radius:12px 0 12px 0;
+	background: #d34836;
+	border:none;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px 10px 6px 10px;
+}
+footer{
+    margin: 10px 0 10px 0;
+    background-color: #212121;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+footer div {
+    margin: 15px;
+    }

@@ -1,11 +1,7 @@
  <!-- début footer -->
- <div class="container footer bg-dark text-light ">
-        <div class="row">
-            <div class="col">
-                <p class="text-center">Mentions légales | Contacts</p>
-            </div>
-        </div>
-    </div>
+ <footer>
+        <p>Mentions légales | Contacts</p>
+        </footer>
     <!-- fin footer -->
 
 

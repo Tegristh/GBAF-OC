@@ -28,7 +28,7 @@ include('Head.php'); ?>
             <!-- contenu textuel -->
             <div class="row">
                 <div class="text-justify">
-                <?php echo $donnees['description'] ?>
+                <?php echo nl2br($donnees['description']); ?>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ include('Head.php'); ?>
                         Laisser un commentaire
                     </button>
                 </div>
-                <div class="col-3 text-justify">
+                <div class="col-3 ">
                 <?php
                 $nb_votes = $bdd->prepare('SELECT COUNT(*) AS nb_votes FROM vote WHERE id_acteur = :acteur_id');
                 $nb_votes->execute(array('acteur_id'=>$_GET['acteur']));
@@ -70,10 +70,14 @@ include('Head.php'); ?>
                 </div>
                 <!-- groupe de boutons et nombre de +/- -->
                 <div class="btn-group col-3 align-self-center" role="social" aria-label="Caesar-choice">
-                    <p class="text-center">Y</p>
-                    <button type="button" class="btn btn-outline-success rounded">+</button>
-                    <button type="button" class="btn btn-outline-danger rounded">-</button>
-                    <p class="text-center">Z</p>
+                    
+                    <button type="button" class="btn btn-outline-success rounded">
+                    <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger rounded">
+                    <i class="fas fa-thumbs-down"></i>
+                    </button>
+                    
                 </div>
             </div>
             <div class="container">
@@ -128,7 +132,6 @@ include('Head.php'); ?>
                     
 
 
-                </div>
-            </div>
-        </div>
+              
+        
    <?php include('footer.php'); ?>
