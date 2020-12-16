@@ -55,6 +55,9 @@ header div {
 .user div {
     margin:10px;
 }
+.deconnecter{
+    color:#ff6666;
+}
 .presentation  {
    padding: 5px;
    margin: 10px 0 10px 0;
@@ -168,9 +171,13 @@ footer div {
 }
 .big-box{
     display:flex;
+    min-width: 570px;
+    max-width: 900px;
+    
     flex-flow: column nowrap;
     background-color: #212121;
 }
+
 .interact{
     background-color: #191919;
     border-radius: 12px;
@@ -257,6 +264,24 @@ footer div {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row: 2;
+}
+.form-line{
+    background-color: #191919;
+    border-radius:20px;
+    font-size: 20px;
+    text-align: center;
+    margin: 40px;
+    padding: 20px;
+}
+.form-line div{
+    padding:20px;
+}
+.alert{
+    background-color:#ff6666;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 20px;
+    padding:20px;
 }
 
 /* Tablette */

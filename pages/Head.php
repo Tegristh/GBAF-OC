@@ -3,7 +3,7 @@
 <title><?php echo $nom_page.' '; ?> - Groupement Banque Assurance Français</title>
 <meta name="viewport" content="width=device-width">
 <link rel="shortcut icon" type="image/png" href="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png"/>
-<link href="http://gbaf.tegristh.fr/styles/default.css" rel="stylesheet">
+<link href="../styles/default.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/eb85e4a2ad.js" crossorigin="anonymous"></script>
 <meta charset="utf8" langue="fr">
 </head>
@@ -21,6 +21,9 @@
             </div>
             <div >
                 Nom & Prénom
+            </div>
+            <div class="deconnecter">
+            <i class="far fa-times-circle"></i>
             </div>
 
         </div>
