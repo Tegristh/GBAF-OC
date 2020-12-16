@@ -24,7 +24,7 @@ include('Head.php');
             réglementation financière française. Sa mission est de promouvoir l'activité bancaire à l’échelle 
             nationale. C’est aussi un interlocuteur privilégié des pouvoirs publics.
         </p>
-        </div>
+    </div>
     <!-- fin partie présentation -->
 
 
@@ -42,37 +42,35 @@ include('Head.php');
 
 <?php $reponse = $bdd->query('SELECT * FROM acteur ');
     while ($donnees = $reponse->fetch())  { ?>
-            <div class="acteur-carte">
-                <div>
-                   <div class="acteur-logo">
-                   <?php echo '<img src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
+             <div class="card" >
+                <div class="acteur-carte">
+                    <div class="acteur-logo"  >
+                        <?php echo '<img src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
                     </div>
-                    <div class="acteur-texte">                                
-                        <h3><?php echo $donnees['acteur'] ?></h3>
+                    <div class="acteur-texte"  >                                
+                            <h3>
+                                <?php echo $donnees['acteur'] ?>
+                            </h3>
                             <p class="justify">
-                            <?php echo $donnees['description'] ?>
+                                <?php echo $donnees['description'] ?>
                             </p>
+                    </div>
                         
-                        
-                            <a class="button" href="acteur.php?acteur=<?php echo $donnees['id_acteur']; ?>">
-                            <button type="button" class="button">
+                   <div class="boutton"> 
+                        <a href="acteur.php?acteur=<?php echo $donnees['id_acteur']; ?>">
+                            <button type="button"  class="boutton" >
                                 Lire la suite
-                            </button></a>
-    
+                            </button>
+                        </a>
                     </div>
                 </div>
-            </div>
-           
-
-           
-    
-    
-           <?php }
+             </div>
+        <?php }
            $reponse->closeCursor();
             ?>
             <!-- fin de carte acteur -->
             
-            </div>
+       </div>
         
   
     <!-- fin partie acteurs -->

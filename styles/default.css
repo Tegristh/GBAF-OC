@@ -1,3 +1,4 @@
+/* Desktop*/
 body {
     background-color:#191919 ;
     color:#FFFFFF;
@@ -6,8 +7,9 @@ body {
     justify-content:center;
 }
 .main-content {
-    min-width: 0;
-    max-width: 800px;
+    min-width: 0px;
+    max-width: 990px;
+   
     min-height:0;
     display:flex;
     flex-direction:column;
@@ -29,15 +31,18 @@ h3 {
     margin: 10px;
     text-align: justify;
 }
+
 header {
     display:flex;
     flex-direction:row;
     font-size: 21px;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: stretch;
     background-color: #212121;
     margin-bottom:5px;
 }
+
+
 header div {
     margin: 20px;
 }
@@ -63,61 +68,67 @@ header div {
 }
 ul {
     display:flex;
-    
-    align-items: center;
-    justify-content:center;
-   list-style-type:none;
-   margin:0;
-   padding:0;  
+    flex-direction: row;
+    flex-wrap: nowrap;   
+    justify-content:space-around;
+    list-style-type:none;
+    margin:0;
+    padding:0;  
 }
 li {
     margin-left:3px;   
 }
 ul li img {
-    min-width: 0;
-    min-height: 0;
-    max-width: 120px;    
-    max-height: 120px;
+    min-width: 0px;
+    min-height: 0px;
+    max-width: 160px;    
+    max-height: 160px;
 }
 .acteur-liste {
     display:flex;
     flex-direction: column;
     justify-items: center;
+    background-color: #212121;
       
 }
-.acteur-liste div{
-    
-    background-color: #212121;
-}
 .acteur-carte{
-    display:flex;
-    flex-direction: column ;    
-    justify-content: center;
-    border:#FFFFFF;
-}
-.acteur-carte div{
-    display:flex;
-    flex-wrap: nowrap;    
-    margin: 10px;
     background-color: #191919;
+    margin:10px;
+    display:grid; 
+     grid-template-columns: 30% auto 14%;
+    grid-template-rows: auto ;
+        
+   
+}
+.card{
+    display: block;
+    
+}
+.acteur-carte div{ 
+    display:grid; 
+    margin: 10px;   
 }
 .acteur-logo{
-    display:flex;
+    grid-column: 1;
+    grid-row: 1 ;
     align-items: center;
     justify-content:center;
 }
 .acteur-logo img{
-    max-width:250px; 
+   
+   max-width: 250px;
     min-width: 0px;   
   }
 .acteur-texte {
-    display:flex;   
-    flex-direction: column;
+   
+    grid-column: 2;
+    grid-row: 1;
 }
-.button{
-    
-    align-self: flex-end;
-    justify-self: flex-end;
+.boutton{
+    grid-column: 3;
+    grid-row:1;
+    justify-self: end;
+    align-self: end;
     border-radius:12px 0 12px 0;
 	background: #d34836;
 	border:none;
@@ -135,3 +146,98 @@ footer{
 footer div {
     margin: 15px;
     }
+.presentation img{
+    width:900px;
+}
+
+/* Tablette */
+@media (min-width:768px) and (max-width:991.98px){
+    .main-content{
+        max-width: 760px;
+    }
+    header {
+        justify-content: space-evenly;
+    }
+    .acteur-carte  {
+        grid-template-columns: 40% auto;
+        grid-template-rows: auto auto;
+        margin: 10px;
+    }
+    .logo {
+        display:flex;
+        justify-content: center;
+    }
+    .acteur-logo{
+        
+        grid-column: 1;
+        grid-row:1;
+    }
+   
+    .acteur-texte{
+        grid-column: 2;
+        grid-row:1;
+    }
+    .boutton{
+        grid-column: 2;
+        grid-row:2;       
+    }
+    ul li img{
+       max-width: 120px;
+       max-height: 120px;
+    }
+    .presentation img{
+        width:700px;
+    }
+       
+    
+  
+    
+    
+    
+    
+}
+
+/* Mobile */
+@media all and (max-width:767.98px) {
+    .main-content{
+        max-width: 570px;
+    }
+    header {
+        flex-direction: column;        
+        justify-content: center;
+    }
+    .logo {
+        display:flex;
+        justify-content: center;
+    }
+    .user {
+        justify-content: center;
+    }
+    .acteur-carte {
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        margin: 10px;
+        
+    }
+    .acteur-logo img {
+       grid-column: 1; 
+       grid-row: 1;
+    }
+    .acteur-texte{
+        grid-column: 1; 
+        grid-row: 2;
+    }
+    .boutton {
+        grid-column: 1; 
+        grid-row: 3;
+        
+    }
+    ul li img{
+        width: 90px;
+        height:90px;
+    }
+    .presentation img{
+        width:500px;
+    }
+}

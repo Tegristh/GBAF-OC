@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>test flexbox</title>
+<title><?php echo $nom_page.' '; ?> - Groupement Banque Assurance Français</title>
 <link rel="shortcut icon" type="image/png" href="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png"/>
 <link href="styles/default.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/eb85e4a2ad.js" crossorigin="anonymous"></script>
@@ -15,10 +15,10 @@
             </a>
         </div>
         <div class="user">
-            <div class="awesome-user">
+            <div >
                 <i class="fas fa-user"></i>
             </div>
-            <div class="identity-user">
+            <div >
                 Nom & Prénom
             </div>
 
