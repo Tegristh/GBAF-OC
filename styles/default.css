@@ -18,13 +18,14 @@ body {
 h2 {
     color:#ff6666;
     text-align: center;
+    font-size: 30px;
    
    
 } 
 h3 {
     color:#ff6666;
     text-align: center;
-  
+    font-size: 25px;
     }
 
 .justify {
@@ -63,6 +64,18 @@ header div {
     background-color: #212121;
 }
 .presentation div {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+}
+.presentation-acteur  {
+    padding: 5px;
+    margin: 10px 0 10px 0;
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: #212121;
+ }
+ .presentation-acteur div {
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
 }
@@ -146,13 +159,105 @@ footer{
 footer div {
     margin: 15px;
     }
-.presentation img{
+.presentation-acteur img{
     width:900px;
+}
+.big-box{
+    display:flex;
+    flex-flow: column nowrap;
+    background-color: #212121;
+}
+.interact{
+    background-color: #191919;
+    border-radius: 12px;
+    margin: 10px;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+}
+.interact div{
+    margin: 10px;
+}
+.nb-commentaires{
+    grid-row: 1;
+    grid-column: 1;
+    align-self:center;
+    justify-self: stretch;
+}
+.commenter-bouton{
+    grid-row: 1;
+    grid-column:3;
+    align-self:center;
+    justify-self: center;
+}
+.satisfaction{
+    grid-row: 1;
+    grid-column: 2;
+    align-self:center;
+    justify-self: center;
+}
+.vote{
+    grid-row: 1;
+    grid-column: 4;
+    align-self:center;
+    justify-self: center;
+}
+.commentaires{
+    background-color: #191919;
+    margin: 10px;
+    border-radius: 12px;   
+}
+.commentaires div{
+    margin:10px;
+}
+.commentaire-none{
+    background-color: #212121;
+    text-align: center;
+    border-radius: 12px ;
+    margin: 10px;
+    padding: 10px;
+}
+.commentaire-none p{
+    margin:10px;
+}
+.commentaire{
+    background-color: #212121;
+    border-radius: 12px ;
+    margin: 10px;
+    display:grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: auto auto;
+}
+.pseudo{
+    background-color: #212121;
+    color:#ff6666;
+    font-size: 20px;
+    border-radius: 12px ;
+    margin: 10px;
+    grid-column: 1;
+    grid-row: 1;
+}
+.time{
+    background-color: #212121;
+    border-radius: 12px ;
+    text-align: right;
+    margin: 10px;
+    grid-column: 3;
+    grid-row: 1;
+}
+.comment{
+    background-color: #191919;
+    border-radius: 12px ;
+    margin: 10px;
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
 }
 
 /* Tablette */
-@media (min-width:768px) and (max-width:991.98px){
-    .main-content{
+@media (min-width:768px) and (max-width:991px){
+    .main-content {
         max-width: 760px;
     }
     header {
@@ -167,39 +272,32 @@ footer div {
         display:flex;
         justify-content: center;
     }
-    .acteur-logo{
+    .acteur-logo {
         
         grid-column: 1;
         grid-row:1;
     }
    
-    .acteur-texte{
+    .acteur-texte {
         grid-column: 2;
         grid-row:1;
     }
-    .boutton{
+    .boutton {
         grid-column: 2;
         grid-row:2;       
     }
-    ul li img{
+    ul li img {
        max-width: 120px;
        max-height: 120px;
     }
-    .presentation img{
+    .presentation-acteur div img {
         width:700px;
-    }
-       
-    
-  
-    
-    
-    
-    
+    }    
 }
 
 /* Mobile */
-@media all and (max-width:767.98px) {
-    .main-content{
+@media (min-width:570px) and (max-width:767px) {
+    .main-content {
         max-width: 570px;
     }
     header {
@@ -224,7 +322,7 @@ footer div {
        grid-column: 1; 
        grid-row: 1;
     }
-    .acteur-texte{
+    .acteur-texte {
         grid-column: 1; 
         grid-row: 2;
     }
@@ -233,11 +331,11 @@ footer div {
         grid-row: 3;
         
     }
-    ul li img{
+    ul li img {
         width: 90px;
         height:90px;
     }
-    .presentation img{
+    .presentation-acteur div img {
         width:500px;
     }
 }
