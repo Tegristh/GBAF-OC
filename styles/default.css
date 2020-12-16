@@ -92,10 +92,11 @@ li {
     margin-left:3px;   
 }
 ul li img {
+    border-radius:10%;
     min-width: 0px;
     min-height: 0px;
-    max-width: 160px;    
-    max-height: 160px;
+    max-width: 158px;    
+    max-height: 158px;
 }
 .acteur-liste {
     display:flex;
@@ -106,6 +107,7 @@ ul li img {
 }
 .acteur-carte{
     background-color: #191919;
+    border-radius:20px;
     margin:10px;
     display:grid; 
      grid-template-columns: 30% auto 14%;
@@ -118,6 +120,7 @@ ul li img {
     
 }
 .acteur-carte div{ 
+   
     display:grid; 
     margin: 10px;   
 }
@@ -128,7 +131,7 @@ ul li img {
     justify-content:center;
 }
 .acteur-logo img{
-   
+   border-radius: 20px;
    max-width: 250px;
     min-width: 0px;   
   }
@@ -160,6 +163,7 @@ footer div {
     margin: 15px;
     }
 .presentation-acteur img{
+    border-radius: 20%;
     width:900px;
 }
 .big-box{

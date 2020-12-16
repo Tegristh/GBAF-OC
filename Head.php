@@ -11,8 +11,8 @@
     <div class="main-content">
         <header>
         <div class="logo">
-            <a class="navbar-brand" href="accueil.php">
-                <img src="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png" width="40" height="51" alt="site logo">
+            <a class="navbar" href="accueil.php">
+                <img src="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png" width="80" height="102" alt="site logo">
             </a>
         </div>
         <div class="user">
