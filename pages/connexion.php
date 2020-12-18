@@ -19,7 +19,7 @@ include('Head.php'); ?>
     </div>
 
     <div>
-    <form action="connexionMembre.php" method="POST" class="container text-left">
+    <form action="connexionMembre.php" method="POST" >
                 <div class="form-line">
 
                     <label>
@@ -43,7 +43,15 @@ include('Head.php'); ?>
                 <div class="form-line"><input type="submit" class="boutton" /></div>
             </form>
     </div>
-    <div class="form-line"><a href="inscription.php">Je n'ai pas de compte!</a></div>
+    <div class="form-line">
+        <div class="line">
+            
+            <div class="grey-box"><a href="#">j'ai oublié mon pseudo</a></div>
+            <div class="grey-box"><a href="inscription.php">je n'ai pas de compte</a></div>
+            <div class="grey-box"><a href="#">j'ai oublié mon mot de passe</a></div>
+        </div>
+    </div>
+
 </div>
 
 <?php include('footer.php') ?>

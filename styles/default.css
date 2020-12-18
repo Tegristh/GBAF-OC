@@ -185,7 +185,7 @@ footer div {
     margin: 10px;
     display:grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
 }
 .interact div{
     margin: 10px;
@@ -196,12 +196,14 @@ footer div {
     align-self:center;
     justify-self: stretch;
 }
-.commenter-bouton{
+.commenter{
     grid-row: 1;
-    grid-column:3;
+    grid-column:3;    
     align-self:center;
     justify-self: center;
 }
+
+
 .satisfaction{
     grid-row: 1;
     grid-column: 2;
@@ -298,10 +300,18 @@ a:visited{
 }
 .line{
     display:flex;
-    flex-flow: row nowrap;
-    justify-content: space-between ;
+    flex-flow: row wrap;
+    justify-content: space-around ;
     padding:0px 10px 0px 10px;
+    
 }
+.grey-box{
+   margin:10px;
+    border-radius: 15px;
+    width:200px;
+    background-color: #212121;
+}
+
 
 
 /* Tablette */

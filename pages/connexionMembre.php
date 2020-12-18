@@ -6,10 +6,16 @@ include'bdd_connect.php';
 if (isset($_SESSION['erreur'])) {
     $_SESSION['erreur'] ='';
 }
-//variables connexion bdd
+if (env('ENV')=='prod'){
+    $redirect= 'http://gbaf.tegristh.fr/';
+}
+else {
+    $redirect= 'http://localhost/GBAF-OC/';
+}
+/*//variables connexion bdd
 $user = env('DB_USER');
 $host = env('DB_HOST');
-$passWord = env('DB_PASSWORD');
+$passWord = env('DB_PASSWORD');*/
 //variables visiteur
 $pseudo = $_POST['pseudo'];
 $password = $_POST['password'];
@@ -48,7 +54,8 @@ if (($usedPseudo == TRUE) AND ($correctPassword == TRUE)) {
     $_SESSION['prenom'] = $userFName;
     $_SESSION['connecte'] = TRUE;
     
-header('location:../index.php');           
+         
 }
+header('location:'.$redirect.'index.php');  
 
 ?>

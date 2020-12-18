@@ -5,7 +5,7 @@ if ($_SESSION['connecte'] != TRUE){
 }
 include('autoload.php'); 
 include('bdd_connect.php');
-//$acteur_id = $_GET['acteur'];
+$acteur_id = $_GET['acteur'];
 $req = $bdd->prepare('SELECT * FROM acteur WHERE id_acteur = :acteur_id');
 $req->execute(array('acteur_id' => $_GET['acteur']));
 $donnees = $req->fetch();
@@ -41,13 +41,8 @@ include('Head.php'); ?>
 
                         echo '<p>'.$comment_count['nb_commentaires'].' Commentaires </p>'; 
                     ?>
-                </div>
-<!-- bouton commenter -->
-                <div class="commenter-bouton" >
-                    <button type="button" class="bouton2">
-                        Commenter
-                    </button>
-                </div>
+</div>
+
 <!-- module satisfaction -->
                 <div class="satisfaction" >
                     <?php
@@ -58,7 +53,7 @@ include('Head.php'); ?>
                         $satisfaction = $bdd->prepare('SELECT AVG (vote) as vote_moyen FROM vote WHERE id_acteur = :acteur_id');
                         $satisfaction->execute(array('acteur_id'=>$_GET['acteur']));
                         $note = $satisfaction->fetch();
-                        echo '<p>'.round($note['vote_moyen']*100).'% d\'utilisateurs satisfaits ('.$vote_count['nb_votes'].' votes exprimés )</p>';
+                        echo '<p>'.round($note['vote_moyen']*100).'% ('.$vote_count['nb_votes'].' votes )</p>';
                
                     ?>
                 </div>
@@ -72,8 +67,18 @@ include('Head.php'); ?>
                     </button>
                 </div>
 
-            </div>
-
+            
+<!-- bouton commenter -->
+                <div class="commenter">
+                    <details>
+                        <summary>Laisser un commentaire</summary>
+                        <form action="commente.php" method="POST">
+                            <input type="hidden" name="id_acteur" value="<?php echo $acteur_id; ?>" />
+                            <input type="textarea" name="message"/>
+                            <input type="submit" class="boutton">
+                        </form>
+                    </details>
+                </div></div>
 <!-- Module affiche commentaires -->  
             <div class="commentaires" >
                 <div><p> les 10 derniers commentaires : </p></div>

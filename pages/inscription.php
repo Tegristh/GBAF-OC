@@ -39,7 +39,7 @@ include('Head.php'); ?>
         <form action="creationMembre.php" method="POST" >
         <div class="form-line">
             <label>
-                <div>Pseudonyme: </div>
+                <div>UserName: </div>
                 <input type="varchar(255)" name="pseudo" />
             </label>
             <div>
@@ -79,7 +79,7 @@ include('Head.php'); ?>
                 <div class="form-line">
                 <div class="line">
                     <label>
-                        <div>Mot de passe:</div>
+                        <div>Password:</div>
                         <input type="varchar(255)" name="password" />
                     </label>
                     <label>
@@ -98,12 +98,12 @@ include('Head.php'); ?>
         </div>
             <div class="form-line"><div class="line">
                 <label>
-                    <div>Question:</div>
+                    <div>Question secrète:</div>
                     <input type="text" name="question" />
                 </label>
             
                 <label>
-                <div>Réponse :</div>
+                <div>Réponse à la question secrète :</div>
                 <input type="text" name="reponse" />
                 </div>
                 <div><?php   
