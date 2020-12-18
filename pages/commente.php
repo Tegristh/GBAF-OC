@@ -6,7 +6,7 @@ include'bdd_connect.php';
 $user_id = $_SESSION['id'];
 $acteur_id = $_POST['id_acteur'];
 
-
+// poster un message
 if (isset($_POST['message'])){
     $message = htmlspecialchars($_POST['message']);
 

@@ -59,7 +59,7 @@ include('Head.php'); ?>
                 </div>
 <!-- Module like/dislike -->
                 <div class="vote" >
-                    <button type="button" class="like">
+                    <button type="button" class="like ">
                         <i class="fas fa-thumbs-up"></i>
                     </button>
                     <button type="button" class="dislike">
@@ -74,7 +74,7 @@ include('Head.php'); ?>
                         <summary>Laisser un commentaire</summary>
                         <form action="commente.php" method="POST">
                             <input type="hidden" name="id_acteur" value="<?php echo $acteur_id; ?>" />
-                            <input type="textarea" name="message"/>
+                            <input type="text" name="message"/>
                             <input type="submit" class="boutton">
                         </form>
                     </details>

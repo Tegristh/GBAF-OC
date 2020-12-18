@@ -60,13 +60,14 @@ include('Head.php');
                                 <?php echo $donnees['description'] ?>
                             </p>
                     </div>
-                        
-                   <div class="boutton"> 
-                        <a href="acteur.php?acteur=<?php echo $donnees['id_acteur']; ?>">
-                            <button type="button"  class="boutton" >
-                                Lire la suite
-                            </button>
-                        </a>
+                    <div class="bottom-right">     
+                        <div class="bottom-right">
+                            <a href="acteur.php?acteur=<?php echo $donnees['id_acteur']; ?>"  >
+                                <button type="button"  class="boutton">
+                                    Lire la suite
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
              </div>
