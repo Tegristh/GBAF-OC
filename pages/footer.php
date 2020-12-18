@@ -1,7 +1,7 @@
  <!-- début footer -->
  <footer>
         <p>Mentions légales | Contacts</p>
-        </footer>
+        </footer></div>
     <!-- fin footer -->
 
 

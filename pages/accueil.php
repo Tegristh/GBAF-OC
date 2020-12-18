@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if ($_SESSION['connecte'] != TRUE){
+    header('location:'.$redirect.'connexion.php');
+}
+
 include('autoload.php'); 
 include('bdd_connect.php');
 
