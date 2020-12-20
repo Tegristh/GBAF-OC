@@ -13,7 +13,7 @@ $nb_commentaires_user->execute(array(
     'userID' => $user_id,
     ));
 $user_comment_count = $nb_commentaires_user->fetch();
-echo $user_comment_count['nb_commentaires_user'];
+
 
 // poster un message
 if ( (isset($_POST['message']))  AND ($user_comment_count['nb_commentaires_user'] == 0))   
@@ -25,14 +25,14 @@ if ( (isset($_POST['message']))  AND ($user_comment_count['nb_commentaires_user'
     $req->execute(array(
         'userID' => $user_id,
         'acteurID' => $acteur_id,
-        'post' => $message,
+        'post' => htmlspecialchars($message),
         
     ));
 }
-echo $user_comment_count['nb_commentaires_user'];
+
 /* prévoir de remplacer un message pour un user qui voudrais re-poster ou modifier son avis.
 elseif ( (isset($_POST['message']))  AND ($user_comment_count['nb_commentaires_user'] != 0)){
-    
+
 }   
 */
 //Puis rediriger vers acteur.php

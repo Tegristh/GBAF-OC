@@ -155,7 +155,7 @@ require'Head.php'; ?>
                         ?>
                     </div>
                     <div class="comment" >
-                        <?php echo '<div>'.$commentaires['post'].'</div>'; ?>
+                        <?php echo '<div>'.nl2br($commentaires['post']).'</div>'; ?>
                     </div>
                 </div><?php }} ?>
             </div>
