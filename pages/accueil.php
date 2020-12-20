@@ -45,7 +45,7 @@ require'Head.php';
                 </p>
             </div>
 
-<?php $reponse = $bdd->query('SELECT * FROM acteur ');
+<?php $reponse = $bdd->query('SELECT id_acteur, acteur, SUBSTRING(description, 1, 255) AS short_description, logo FROM acteur ');
     while ($donnees = $reponse->fetch())  { ?>
              <div class="card" >
                 <div class="acteur-carte">
@@ -57,7 +57,7 @@ require'Head.php';
                                 <?php echo $donnees['acteur'] ?>
                             </h3>
                             <p class="justify">
-                                <?php echo $donnees['description'] ?>
+                                <?php echo nl2br($donnees['short_description']).' <em>...</em> ' ?>
                             </p>
                     </div>
                     <div class="bottom-right">     
