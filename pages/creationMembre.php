@@ -12,11 +12,11 @@ $host = env('DB_HOST');
 $passWord = env('DB_PASSWORD');
 //variables visiteur
 $pseudo = $_POST['pseudo'];
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
+$nom = strtolower($_POST['nom']);
+$prenom = strtolower($_POST['prenom']);
 $password = $_POST['password'];
 $verifPassword = $_POST['verif_password'];
-$question = $_POST['question'];
+$question = strtolower($_POST['question']);
 $reponseQuestion = $_POST['reponse'];
 
 // verification champ non vides

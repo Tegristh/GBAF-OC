@@ -54,9 +54,13 @@ require'Head.php'; ?>
                         $satisfaction = $bdd->prepare('SELECT AVG (vote) as vote_moyen FROM vote WHERE id_acteur = :acteur_id');
                         $satisfaction->execute(array('acteur_id'=>$_GET['acteur']));
                         $note = $satisfaction->fetch();
-                        echo '<p>'.round($note['vote_moyen']*100).'% ('.$vote_count['nb_votes'].' votes )</p>';
+                        $pourcentage = round($note['vote_moyen']*100);
+                        ?>
+                        <div class="meter" >
+                            <span style="width:<?php echo $pourcentage; ?>%"></span>
+                            <div><?php echo '( '.$pourcentage.'% '.$vote_count['nb_votes'].' votes )</div>'; ?></div>
                
-                    ?>
+                    
                 </div>
 <!-- Module like/dislike -->
 <?php 
@@ -140,13 +144,13 @@ require'Head.php'; ?>
                             $requete->execute(array('acteur_id'=>$_GET['acteur']));
                             while ($commentaires = $requete->fetch()) {
                                 $postAuteur=$commentaires['id_user'];
-                                $auteur = $bdd->prepare('SELECT username FROM account WHERE id_user = :user_id');
+                                $auteur = $bdd->prepare('SELECT prenom FROM account WHERE id_user = :user_id');
                                 $auteur->execute(array('user_id'=>$postAuteur));
                                 $pseudo = $auteur->fetch(); ?>
                 <div class="commentaire">                 
                     <div class="pseudo" >
                         <?php 
-                            echo '<div>'.ucfirst($pseudo['username']).'</div>'; 
+                            echo '<div>'.ucfirst($pseudo['prenom']).'</div>'; 
                         ?>
                     </div>
                     <div class="time" >

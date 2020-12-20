@@ -25,12 +25,12 @@ include('Head.php'); ?>
                     <label>
                        
                         <div>Pseudo: </div>
-                        <input type="text" class="textarea" name="pseudo" />
+                        <input type="text" style="width:90%" class="textarea" name="pseudo" />
                     
                     </label>
                     <label>
                         <div>Mot de passe:</div>
-                        <input type="text" class="textarea" name="password" />
+                        <input type="text" style="width:90%" class="textarea" name="password" />
                     </label>
                     <!-- Se souvenir de moi
                         <label>

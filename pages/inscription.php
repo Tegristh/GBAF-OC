@@ -40,21 +40,23 @@ require'Head.php'; ?>
         <div class="form-line">
             <label>
                 <div>UserName: </div>
-                <input type="text" class="textarea" name="pseudo" />
+                <input type="text"  class="textarea" name="pseudo" />
             </label>
-            <div>
-                <div class="line" >
+            
+               
                     <label>
                         <div >Nom:</div>
                         <input type="text" class="textarea" name="nom" />
                     </label>
-            
+               
+              
+
                     <label>
                         <div>Prénom:</div>
                         <input type="text" class="textarea" name="prenom" />
                     </label>
-                </div> 
-            </div>
+               
+            
 <!-- alertes d'erreur -->
                 <div><?php   
                         if (isset($usedPseudo) && $usedPseudo === TRUE) {
@@ -78,14 +80,14 @@ require'Head.php'; ?>
             <div>
                 <div class="form-line">
                 <div class="line">
-                    <label>
+                    
                         <div>Password:</div>
                         <input type="texta" class="textarea" name="password" />
-                    </label>
-                    <label>
+                   
+                  
                         <div>Vérification:</div>
                         <input type="text"  class="textarea" name="verif_password" />
-                    </label>
+                   
                 </div>
                 <div> 
                     <?php 
@@ -97,15 +99,15 @@ require'Head.php'; ?>
             </div>
         </div>
             <div class="form-line"><div class="line">
-                <label>
+                
                     <div>Question secrète:</div>
                     <input type="text" class="textarea" name="question" />
-                </label>
+               
             
-                <label>
+               
                 <div>Réponse à la question secrète :</div>
-                <input type="text" class="textarea" name="reponse" />
-                </div>
+                <input type="text" class="textarea" name="reponse" /></div>
+              
                 <div><?php   
                         if (isset($emptyQuestion) && $emptyQuestion === TRUE) {
                         echo '<div class="alert">Vous n\'avez pas Choisi de question secrète!</div>';

@@ -29,7 +29,7 @@
                 <?php
                     if (isset($_SESSION['nom']) AND isset($_SESSION['prenom'])) {
                         echo ' <div class="user">';
-                        echo '<div ><i class="fas fa-user"></i></div><div >';
+                        echo '<div ><a href="param_compte.php" title="profil"><i class="fas fa-user"></i></a></div><div >';
                         echo ucfirst($_SESSION['prenom']).' '.strtoupper($_SESSION['nom']) ;
                         echo '</div><div class="deconnecter"><a href="deconnect.php" title="Se déconnecter!"><i class="far fa-times-circle"></i></a></div>';
                         echo ' </div>';
