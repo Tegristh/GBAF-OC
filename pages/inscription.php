@@ -26,10 +26,10 @@ $validPassword=false;
 $emptyQuestion=TRUE;
 $emptyReponse=True;
 */
-include('autoload.php');
-include('bdd_connect.php');
+require'autoload.php';
+require'bdd_connect.php';
 $nom_page='inscription';
-include('Head.php'); ?>
+require'Head.php'; ?>
 <div class="big-box">
     <div>
         <h2>Formulaire d'inscription</h2>
@@ -40,18 +40,18 @@ include('Head.php'); ?>
         <div class="form-line">
             <label>
                 <div>UserName: </div>
-                <input type="varchar(255)" name="pseudo" />
+                <input type="text" class="textarea" name="pseudo" />
             </label>
             <div>
                 <div class="line" >
                     <label>
                         <div >Nom:</div>
-                        <input type="varchar" name="nom" />
+                        <input type="text" class="textarea" name="nom" />
                     </label>
             
                     <label>
                         <div>Prénom:</div>
-                        <input type="varchar" name="prenom" />
+                        <input type="text" class="textarea" name="prenom" />
                     </label>
                 </div> 
             </div>
@@ -80,11 +80,11 @@ include('Head.php'); ?>
                 <div class="line">
                     <label>
                         <div>Password:</div>
-                        <input type="varchar(255)" name="password" />
+                        <input type="texta" class="textarea" name="password" />
                     </label>
                     <label>
                         <div>Vérification:</div>
-                        <input type="varchar(255)" name="verif_password" />
+                        <input type="text"  class="textarea" name="verif_password" />
                     </label>
                 </div>
                 <div> 
@@ -99,12 +99,12 @@ include('Head.php'); ?>
             <div class="form-line"><div class="line">
                 <label>
                     <div>Question secrète:</div>
-                    <input type="text" name="question" />
+                    <input type="text" class="textarea" name="question" />
                 </label>
             
                 <label>
                 <div>Réponse à la question secrète :</div>
-                <input type="text" name="reponse" />
+                <input type="text" class="textarea" name="reponse" />
                 </div>
                 <div><?php   
                         if (isset($emptyQuestion) && $emptyQuestion === TRUE) {
@@ -124,4 +124,4 @@ include('Head.php'); ?>
     </div>
                         </div>
 
-<?php include('footer.php') ?>
+<?php require'footer.php' ?>

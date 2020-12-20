@@ -40,7 +40,7 @@ header {
     justify-content: space-between;
     align-items: stretch;
     background-color: #212121;
-    margin-bottom:5px;
+    margin-bottom:10px;
 }
 
 
@@ -195,8 +195,9 @@ ul li img {
 .dislike2{
     margin:10px 0px 0px 5px;
     border-radius: 0px 12px 12px 0px;
+    text-shadow: #191919 2px 2px 2px ;
 	background: #f66;
-    border:1px solid #FFF;    
+    border:3px solid #FFF;    
     box-shadow:#f66 0px 2px 0px;
     position:relative;
     top:2px;
@@ -233,8 +234,9 @@ ul li img {
 .like2{
     margin:10px 0px 0px 5px;
     border-radius:12px 0px 0px 12px;
-	background: #6F6;
-    border:1px solid #FFF;    
+    text-shadow: #191919 2px 2px 2px ;
+    background: #6f6;
+    border:3px solid #FFF;    
     box-shadow:#6f6 0px 2px 0px;
     position:relative;
     top:2px;
@@ -277,11 +279,11 @@ footer div {
 .interact div{
     margin: 10px;
 }
-.nb-commentaires{
+.nb_commentaires{
     grid-row: 1;
     grid-column: 1;
     align-self:center;
-    justify-self: stretch;
+    justify-self: center;
 }
 .commenter{
     grid-row: 1;
@@ -360,12 +362,12 @@ footer div {
     border-radius:20px;
     font-size: 20px;
     text-align: center;
-    margin: 40px;
-    padding: 20px;
+    margin:40px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    
 }
-.form-line div{
-    padding:20px;
-}
+
 .alert{
     background-color:#ff6666;
     border-radius: 10px;
@@ -388,18 +390,31 @@ a:visited{
 .line{
     display:flex;
     flex-flow: row wrap;
-    justify-content: space-around ;
-    padding:0px 10px 0px 10px;
+    justify-content: space-evenly ;
+    padding:10px 10px 10px 10px;
     
 }
 .grey-box{
    margin:10px;
+   padding: 10px 0px 10px 0px;
     border-radius: 15px;
-    width:200px;
+    width:250px;
     background-color: #212121;
 }
 textarea{
     background-color: #232323;
+}
+label{
+    width:250px;
+}
+textarea{
+    overflow: auto;
+    resize:none;
+}
+.textarea{
+    overflow: auto;
+    background-color: #212121;
+    color:#fff;
 }
 
 

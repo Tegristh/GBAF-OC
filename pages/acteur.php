@@ -3,15 +3,16 @@ session_start();
 if ($_SESSION['connecte'] != TRUE){
     header('location:'.$redirect.'connexion.php');
 }
-include('autoload.php'); 
-include('bdd_connect.php');
+require'autoload.php'; 
+require'bdd_connect.php';
 $acteur_id = $_GET['acteur'];
+$user_id= $_SESSION['id'];
 $req = $bdd->prepare('SELECT * FROM acteur WHERE id_acteur = :acteur_id');
 $req->execute(array('acteur_id' => $_GET['acteur']));
 $donnees = $req->fetch();
 
 $nom_page= $donnees['acteur']; 
-include('Head.php'); ?>
+require'Head.php'; ?>
         <!-- Début présentation de l'acteur -->
         <div class="presentation-acteur">         
             <div>
@@ -58,14 +59,62 @@ include('Head.php'); ?>
                     ?>
                 </div>
 <!-- Module like/dislike -->
-                <div class="vote" >
-                    <button type="button" class="like ">
+<?php 
+    $has_user_vote = $bdd->prepare('SELECT COUNT(*) AS user_vote FROM vote WHERE id_acteur = :acteur_id AND id_user = :userID');
+    $has_user_vote->execute(array(
+        'acteur_id'=>$acteur_id,
+        'userID' => $user_id,
+        ));
+    $user_has_vote = $has_user_vote->fetch();
+    
+    if (($user_has_vote['user_vote'] == 0)) {    
+    ?>
+    <div class="vote">
+                <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like ">
                         <i class="fas fa-thumbs-up"></i>
-                    </button>
-                    <button type="button" class="dislike">
+                    </button></a>
+                <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0"><button type="button" class="dislike">
                         <i class="fas fa-thumbs-down"></i>
-                    </button>
+                    </button></a>
                 </div>
+    <?php 
+    }
+    else {
+    //récup du vote
+    $get_user_vote = $bdd->prepare('SELECT vote FROM vote where id_user = :id_user AND id_acteur = :id_acteur');
+    $get_user_vote->execute(array(
+        'id_user'=>$user_id,
+        'id_acteur'=>$acteur_id,
+    ));
+    $user_vote = $get_user_vote->fetch();
+
+    if ($user_vote['vote'] == 1){
+    //si vote + 
+    ?>
+    <div class="vote" >
+                    <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>"><button type="button" class="like2 ">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button></a>
+                    <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0"><button type="button" class="dislike">
+                        <i class="fas fa-thumbs-down"></i>
+                    </button></a>
+                </div>
+    <?php 
+    }
+    elseif ($user_vote['vote'] == 0){    //si vote -
+    ?>
+    <div class="vote" >
+                    <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button></a>
+                    <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>"><button type="button" class="dislike2">
+                        <i class="fas fa-thumbs-down"></i>
+                    </button></a>
+                </div>
+    <?php
+    }}
+    ?>
+
 
             
 <!-- bouton commenter -->
@@ -74,8 +123,8 @@ include('Head.php'); ?>
                         <summary>Laisser un commentaire</summary>
                         <form action="commente.php" method="POST">
                             <input type="hidden" name="id_acteur" value="<?php echo $acteur_id; ?>" />
-                            <input type="text" name="message"/>
-                            <input type="submit" class="boutton">
+                            <textarea class="textarea" rows="5" cols="auto" name="message"></textarea>
+                            <br /><input type="submit" class="boutton">
                         </form>
                     </details>
                 </div></div>
@@ -114,4 +163,4 @@ include('Head.php'); ?>
                             </div>
 
 
-<?php include('footer.php'); ?>
+<?php require'footer.php'; ?>

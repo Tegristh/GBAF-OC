@@ -4,11 +4,11 @@ if ($_SESSION['connecte'] != TRUE){
     header('location:'.$redirect.'connexion.php');
 }
 
-include('autoload.php'); 
-include('bdd_connect.php');
+require'autoload.php'; 
+require'bdd_connect.php';
 
 $nom_page= 'accueil'; 
-include('Head.php'); 
+require'Head.php'; 
 ?>
     
     <!-- début partie présentation -->
@@ -80,4 +80,4 @@ include('Head.php');
         
   
     <!-- fin partie acteurs -->
-  <?php include('footer.php'); ?></div>
+  <?php require'footer.php'; ?></div>

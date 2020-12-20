@@ -3,8 +3,8 @@ session_start();
 if (isset($_SESSION['erreur'])){
     $erreur= $_SESSION['erreur'];
 }
-include('autoload.php');
-include('bdd_connect.php');
+require'autoload.php';
+require'bdd_connect.php';
 $nom_page='connexion';
 include('Head.php'); ?>
 <div class="big-box">
@@ -25,12 +25,12 @@ include('Head.php'); ?>
                     <label>
                        
                         <div>Pseudo: </div>
-                        <input type="varchar(255)" name="pseudo" />
+                        <input type="text" class="textarea" name="pseudo" />
                     
                     </label>
                     <label>
                         <div>Mot de passe:</div>
-                        <input type="varchar(255)" name="password" />
+                        <input type="text" class="textarea" name="password" />
                     </label>
                     <!-- Se souvenir de moi
                         <label>
@@ -38,15 +38,17 @@ include('Head.php'); ?>
                         <div>Se souvenir de moi
                         <input type="checkbox" name="souvenir" /></div>
                     </label> -->
-                </div>
+                
                 
                 <div class="form-line"><input type="submit" class="boutton" /></div>
             </form>
-    </div>
+    </div></div>
     <div class="form-line">
         <div class="line">
             
-            <div class="grey-box"><a href="#">j'ai oublié mon pseudo</a></div>
+<!-- Prévu mais pas dans le cahier des charges 
+    <div class="grey-box"><a href="#">j'ai oublié mon pseudo</a></div> 
+-->
             <div class="grey-box"><a href="inscription.php">je n'ai pas de compte</a></div>
             <div class="grey-box"><a href="#">j'ai oublié mon mot de passe</a></div>
         </div>
@@ -54,4 +56,4 @@ include('Head.php'); ?>
 
 </div>
 
-<?php include('footer.php') ?>
+<?php require'footer.php' ?>

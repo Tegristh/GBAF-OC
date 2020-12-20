@@ -1,7 +1,7 @@
 <?php 
 session_start();
-include'autoload.php'; 
-include'bdd_connect.php';
+require'autoload.php'; 
+require'bdd_connect.php';
 
 if (env('ENV')=='prod'){
     $redirect= 'http://gbaf.tegristh.fr/';
