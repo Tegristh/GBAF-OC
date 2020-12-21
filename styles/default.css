@@ -425,6 +425,7 @@ em{
     color:#ff6666;
 }
 .meter { 
+    /* https://css-tricks.com/css3-progress-bars/ */
 	height: 15px;  /* Can be anything */
 	position: relative;
 	background: #555;
@@ -435,6 +436,7 @@ em{
 	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
 }
 .meter > span {
+    /* https://css-tricks.com/css3-progress-bars/ */
     display: block;
     height: 100%;
     border-top-right-radius: 8px;
