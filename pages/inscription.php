@@ -36,59 +36,41 @@ require'Head.php'; ?>
         <p style="text-align:center">Tous les champs sont obligatoires!</p>
     </div>
     <div>
-        <form action="creationMembre.php" method="POST" >
-        <div class="form-line">
-            <label>
-                <div>UserName: </div>
-                <input type="text"  class="textarea" name="pseudo" />
-            </label>
-            
-               
-                    <label>
-                        <div >Nom:</div>
-                        <input type="text" class="textarea" name="nom" />
-                    </label>
-               
-              
-
-                    <label>
-                        <div>Prénom:</div>
-                        <input type="text" class="textarea" name="prenom" />
-                    </label>
-               
-            
+        <form action="creationMembre.php"  method="POST" >
+        
+            <div class="form-line">
+            <label for="pseudo">UserName:</label>
+                <input type="text" id="pseudo" class="textarea" name="pseudo" />
+            <label for="nom">Nom:</label>
+                <input type="text" id="nom" class="textarea" name="nom" />
+            <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" class="textarea" name="prenom" />
 <!-- alertes d'erreur -->
-                <div><?php   
+                <div>
+                    <?php   
                         if (isset($usedPseudo) && $usedPseudo === TRUE) {
                         echo '<div class="alert">pseudonyme déjà utilisé, veuillez en choisir un autre!</div>';
                         };  
-                    ?>
-                
+                    ?>                
                     <?php   
                         if (isset($emptyLName) && $emptyLName === TRUE) {
                         echo '<div class="alert">Vous n\'avez pas renseigné de Nom!</div>';
                         };  
                     ?>
-
-                <?php   
+                    <?php   
                         if (isset($emptyFName) && $emptyFName === TRUE) {
                         echo '<div class="alert">Vous n\'avez pas renseigné de Prénom!</div>';
                         };  
                     ?>
                 </div>
             </div>
-            <div>
-                <div class="form-line">
-                <div class="line">
-                    
-                        <div>Password:</div>
-                        <input type="texta" class="textarea" name="password" />
+           
+            <div class="form-line">    
+            <label for="password">Password:</label>
+                <input type="password" id="password"class="textarea" name="password" />
+            <label for="verif_password">Vérification:</label>
+                <input type="password" id="verif_password"  class="textarea" name="verif_password" />
                    
-                  
-                        <div>Vérification:</div>
-                        <input type="text"  class="textarea" name="verif_password" />
-                   
-                </div>
                 <div> 
                     <?php 
                         if (isset($validPassword) && $validPassword === FALSE) {
@@ -97,18 +79,15 @@ require'Head.php'; ?>
                     ?>
                 </div>
             </div>
-        </div>
-            <div class="form-line"><div class="line">
-                
-                    <div>Question secrète:</div>
-                    <input type="text" class="textarea" name="question" />
-               
             
-               
-                <div>Réponse à la question secrète :</div>
-                <input type="text" class="textarea" name="reponse" /></div>
+            <div class="form-line">
+            <label for="question">Question secrète:</label>
+                <input type="text" id="question" class="textarea" name="question" />
+            <label for="reponse">Réponse à la question secrète :</label>
+                <input type="text" id="reponse" class="textarea" name="reponse" />
               
-                <div><?php   
+                <div>
+                    <?php   
                         if (isset($emptyQuestion) && $emptyQuestion === TRUE) {
                         echo '<div class="alert">Vous n\'avez pas Choisi de question secrète!</div>';
                         };  
@@ -121,7 +100,8 @@ require'Head.php'; ?>
                     ?>
                 </div>
             </div>
-        <div class="form-line"><input type="submit"class="boutton" /></div>
+
+            <div class="form-line"><button type="submit"class="boutton" >Envoyer</button>
         </form>
     </div>
                         </div>

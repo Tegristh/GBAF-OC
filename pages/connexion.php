@@ -21,34 +21,18 @@ include('Head.php'); ?>
     <div>
     <form action="connexionMembre.php" method="POST" >
                 <div class="form-line">
-
-                    <label>
-                       
-                        <div>Pseudo: </div>
-                        <input type="text" style="width:90%" class="textarea" name="pseudo" />
-                    
-                    </label>
-                    <label>
-                        <div>Mot de passe:</div>
-                        <input type="text" style="width:90%" class="textarea" name="password" />
-                    </label>
-                    <!-- Se souvenir de moi
-                        <label>
-                       
-                        <div>Se souvenir de moi
-                        <input type="checkbox" name="souvenir" /></div>
-                    </label> -->
-                
-                
-                <div class="form-line"><input type="submit" class="boutton" /></div>
+                <label for="pseudo">UserName:</label>
+                <input type="text" id="pseudo" class="textarea" name="pseudo" />
+                <label for="password">Password:</label>
+                <input type="password" id="password"class="textarea" name="password" />
+                </div>
+                <div class="form-line">
+                    <button type="submit" class="boutton" >Envoyer</button>
             </form>
     </div></div>
     <div class="form-line">
         <div class="line">
             
-<!-- Prévu mais pas dans le cahier des charges 
-    <div class="grey-box"><a href="#">j'ai oublié mon pseudo</a></div> 
--->
             <div class="grey-box"><a href="inscription.php">je n'ai pas de compte</a></div>
             <div class="grey-box"><a href="#">j'ai oublié mon mot de passe</a></div>
         </div>

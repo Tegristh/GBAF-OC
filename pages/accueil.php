@@ -12,6 +12,7 @@ require'Head.php';
 ?>
     
     <!-- début partie présentation -->
+    <div class="big-box">
     <div class="presentation">
         <h2>Le Groupement Banque Assurance Français</h2>
         <p> est une fédération représentant les 6 grand groupes Français:</p>
@@ -78,6 +79,6 @@ require'Head.php';
             
        </div>
         
-  
+    </div>
     <!-- fin partie acteurs -->
   <?php require'footer.php'; ?></div>

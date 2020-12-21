@@ -13,8 +13,9 @@ $donnees = $req->fetch();
 
 $nom_page= $donnees['acteur']; 
 require'Head.php'; ?>
+   
         <!-- Début présentation de l'acteur -->
-        <div class="presentation-acteur">         
+        <div class="big-box presentation-acteur">         
             <div>
                 <?php echo '<img src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
             </div>
@@ -31,7 +32,7 @@ require'Head.php'; ?>
         <!-- Fin présentation de l'acteur -->
 
 
-        <div class="big-box" >
+        <div class="big-box">
             <div class="interact" >
 <!-- Nombre de commentaires -->
                 <div class="nb_commentaires" >
@@ -40,9 +41,10 @@ require'Head.php'; ?>
                         $nb_commentaires->execute(array('acteur_id'=>$_GET['acteur']));
                         $comment_count = $nb_commentaires->fetch();
 
-                        echo '<p>'.$comment_count['nb_commentaires'].' Commentaires </p>'; 
+                        echo '<p>'.$comment_count['nb_commentaires'].' Commentaire(s) </p>'; 
                     ?>
-</div>
+                </div>
+
 
 <!-- module satisfaction -->
                 <div class="satisfaction" >
@@ -57,8 +59,10 @@ require'Head.php'; ?>
                         $pourcentage = round($note['vote_moyen']*100);
                         ?>
                         <div class="meter" >
-                            <span style="width:<?php echo $pourcentage; ?>%"></span>
-                            <div><?php echo '( '.$pourcentage.'% '.$vote_count['nb_votes'].' votes )</div>'; ?></div>
+                            <span  class="span-green" style="width:<?php echo $pourcentage; ?>%"></span>
+                            
+                           
+                            <div><?php echo '( '.$pourcentage.'% '.$vote_count['nb_votes'].' vote(s) )</div>'; ?></div>
                
                     
                 </div>
@@ -73,8 +77,8 @@ require'Head.php'; ?>
     
     if (($user_has_vote['user_vote'] == 0)) {    
     ?>
-    <div class="vote">
-                <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like ">
+                <div class="vote">
+                    <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like ">
                         <i class="fas fa-thumbs-up"></i>
                     </button></a>
                 <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0"><button type="button" class="dislike">
@@ -95,7 +99,7 @@ require'Head.php'; ?>
     if ($user_vote['vote'] == 1){
     //si vote + 
     ?>
-    <div class="vote" >
+                <div class="vote" >
                     <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>"><button type="button" class="like2 ">
                         <i class="fas fa-thumbs-up"></i>
                     </button></a>
@@ -107,7 +111,7 @@ require'Head.php'; ?>
     }
     elseif ($user_vote['vote'] == 0){    //si vote -
     ?>
-    <div class="vote" >
+                <div class="vote" >
                     <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like">
                         <i class="fas fa-thumbs-up"></i>
                     </button></a>
