@@ -52,6 +52,13 @@ require'Head.php'; ?>
                         $nb_votes = $bdd->prepare('SELECT COUNT(*) AS nb_votes FROM vote WHERE id_acteur = :acteur_id');
                         $nb_votes->execute(array('acteur_id'=>$_GET['acteur']));
                         $vote_count = $nb_votes->fetch();
+                        $total_vote = $vote_count['nb_votes'];
+
+                        $likes = $bdd->prepare('SELECT COUNT(*) AS nb_likes FROM vote WHERE id_acteur = :acteur_id AND vote = 1');
+                        $likes->execute(array('acteur_id'=>$_GET['acteur']));
+                        $nb_votes = $likes->fetch();
+                        $nb_likes = $nb_votes['nb_likes'];
+                        $nb_dislikes = ($total_vote-$nb_likes);
 
                         $satisfaction = $bdd->prepare('SELECT AVG (vote) as vote_moyen FROM vote WHERE id_acteur = :acteur_id');
                         $satisfaction->execute(array('acteur_id'=>$_GET['acteur']));
@@ -62,7 +69,7 @@ require'Head.php'; ?>
                             <span  class="span-green" style="width:<?php echo $pourcentage; ?>%"></span>
                             
                            
-                            <div><?php echo '( '.$pourcentage.'% '.$vote_count['nb_votes'].' vote(s) )</div>'; ?></div>
+                            <div><?php echo '( '.$pourcentage.'% '.$total_vote.' vote(s) )</div>'; ?></div>
                
                     
                 </div>
@@ -79,9 +86,11 @@ require'Head.php'; ?>
     ?>
                 <div class="vote">
                     <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like ">
+                        <?php echo $nb_likes; ?>
                         <i class="fas fa-thumbs-up"></i>
                     </button></a>
                 <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0"><button type="button" class="dislike">
+                        <?php echo $nb_dislikes; ?>
                         <i class="fas fa-thumbs-down"></i>
                     </button></a>
                 </div>
@@ -101,9 +110,11 @@ require'Head.php'; ?>
     ?>
                 <div class="vote" >
                     <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>"><button type="button" class="like2 ">
+                    <?php echo $nb_likes; ?>
                         <i class="fas fa-thumbs-up"></i>
                     </button></a>
                     <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0"><button type="button" class="dislike">
+                    <?php echo $nb_dislikes; ?>
                         <i class="fas fa-thumbs-down"></i>
                     </button></a>
                 </div>
@@ -113,9 +124,11 @@ require'Head.php'; ?>
     ?>
                 <div class="vote" >
                     <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like">
+                    <?php echo $nb_likes; ?>
                         <i class="fas fa-thumbs-up"></i>
                     </button></a>
                     <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>"><button type="button" class="dislike2">
+                    <?php echo $nb_dislikes; ?>
                         <i class="fas fa-thumbs-down"></i>
                     </button></a>
                 </div>

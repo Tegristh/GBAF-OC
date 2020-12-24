@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title><?php echo $nom_page.' '; ?> - Groupement Banque Assurance Français</title>
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/png" href="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png"/>
 <link href="../styles/default.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/eb85e4a2ad.js" crossorigin="anonymous"></script>

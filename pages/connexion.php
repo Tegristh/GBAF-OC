@@ -6,7 +6,7 @@ if (isset($_SESSION['erreur'])){
 require'autoload.php';
 require'bdd_connect.php';
 $nom_page='connexion';
-include('Head.php'); ?>
+require'Head.php'; ?>
 <div class="big-box">
     <div>
         <h2>Connexion</h2>
@@ -22,14 +22,15 @@ include('Head.php'); ?>
     <form action="connexionMembre.php" method="POST" >
                 <div class="form-line">
                 <label for="pseudo">UserName:</label>
-                <input type="text" id="pseudo" class="textarea" name="pseudo" />
+                <input type="text"id="pseudo"class="textarea" name="pseudo" />
                 <label for="password">Password:</label>
-                <input type="password" id="password"class="textarea" name="password" />
+                <input type="password"id="password"class="textarea" name="password" />
                 </div>
                 <div class="form-line">
-                    <button type="submit" class="boutton" >Envoyer</button>
+                    <button type="submit"class="boutton" >Envoyer</button>
+                </div>
             </form>
-    </div></div>
+    </div>
     <div class="form-line">
         <div class="line">
             
