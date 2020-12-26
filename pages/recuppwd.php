@@ -8,10 +8,10 @@ require'Head.php'; ?>
     <div class="form-line">
         <form action="verif_user.php" method="POST">
         <label for="userName">UserName: </label>
-        <input type="text"id="userName"class="textarea"name="userName"required />
-        <button type="submit"class="boutton">Envoyer</button>
+        <input type="text" id="userName" class="textarea" name="userName" required />
+        <button type="submit" class="boutton">Envoyer</button>
         </form>
     </div>
-</div>
+
 <?php 
 require'footer.php'; ?>
