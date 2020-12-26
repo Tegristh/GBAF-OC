@@ -63,10 +63,8 @@ require'Head.php';
                     </div>
                     <div class="bottom-right">     
                         <div class="bottom-right">
-                            <a href="acteur.php?acteur=<?php echo $donnees['id_acteur']; ?>"  >
-                                <button type="button"  class="boutton">
-                                    Lire la suite
-                                </button>
+                            <a href="acteur.php?acteur=<?php echo $donnees['id_acteur']; ?>" class="boutton"  >
+                               Lire la suite
                             </a>
                         </div>
                     </div>
@@ -79,6 +77,6 @@ require'Head.php';
             
        </div>
         
-    </div>
+    
     <!-- fin partie acteurs -->
-  <?php require'footer.php'; ?></div>
+  <?php require'footer.php'; ?>

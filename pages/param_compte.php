@@ -29,8 +29,8 @@ $userReponse = $user['reponse'];
 <p>Votre UserName: <em><?php echo $userName; ?></em></p>
 <form action="chUserName.php" method="POST">
 <label for="newUserName">Nouveau UserName: </label>
-<input type="text"id="newUserName"class="textarea"name="newUserName"required />
-<button type="submit"class="boutton">Modifier</button>
+<input type="text" id="newUserName" class="textarea" name="newUserName" required />
+<button type="submit" class="boutton">Modifier</button>
 </form>
 </div>
 
@@ -39,10 +39,10 @@ $userReponse = $user['reponse'];
 <h3 style="text-align:left;">Changer votre mot de passe: </h3>
 <form action="chPassword.php" method="POST">
 <label for="password">Nouveau mot de passe: </label>
-<input type="password"id="password"class="textarea"name="password"required />
+<input type="password" id="password" class="textarea" name="password" required />
 <label for="Vpassword">Vérifier mot de passe: </label>
-<input type="password"id="Vpassword"class="textarea"name="Vpassword"required />
-<button type="submit"class="boutton">Modifier</button>
+<input type="password" id="Vpassword" class="textarea" name="Vpassword" required />
+<button type="submit" class="boutton">Modifier</button>
 </form>
 </div>
 <!-- formulaire nom-->
@@ -51,8 +51,8 @@ $userReponse = $user['reponse'];
 <p>Votre Nom: <em><?php echo strtoupper($userNom); ?></em></p>
 <form action="chNom.php" method="POST">
 <label for="newNom"> Nouveau Nom:</label>
-<input type="text"id="newNom"class="textarea"name="newNom"required />
-<button type="submit"class="boutton">Modifier</button>
+<input type="text" id="newNom" class="textarea" name="newNom" required />
+<button type="submit" class="boutton">Modifier</button>
 </form>
 </div>
 <!-- formulaire prenom-->
@@ -61,8 +61,8 @@ $userReponse = $user['reponse'];
 <p>Votre Prénom: <em><?php echo ucfirst($userPrenom); ?></em></p>
 <form action="chPrenom.php" method="POST">
 <label for="newPrenom"> Nouveau Prénom: </label>
-<input type="text"id="newPrenom"class="textarea"name="newPrenom"required/>
-<button type="submit"class="boutton">Modifier</button>
+<input type="text" id="newPrenom" class="textarea" name="newPrenom" required/>
+<button type="submit" class="boutton">Modifier</button>
 </form>
 </div>
 <!-- formulaire question/réponse secrete-->
@@ -96,8 +96,8 @@ $userReponse = $user['reponse'];
 </select>
 <label for="reponse">Réponse à la question secrète :</label>
     <input type="text" id="reponse" class="textarea" name="reponse" />
-<button type="submit"class="boutton">Modifier</button>
+<button type="submit" class="boutton">Modifier</button>
 </form>
 </div>
-</div>
+
 <?php require'footer.php' ?>

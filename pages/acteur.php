@@ -85,14 +85,14 @@ require'Head.php'; ?>
     if (($user_has_vote['user_vote'] == 0)) {    
     ?>
                 <div class="vote">
-                    <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like ">
+                    <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1" class="like">
                         <?php echo $nb_likes; ?>
                         <i class="fas fa-thumbs-up"></i>
-                    </button></a>
-                <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0"><button type="button" class="dislike">
+                   </a>
+                <a href="vote-add.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0" class="dislike">
                         <?php echo $nb_dislikes; ?>
                         <i class="fas fa-thumbs-down"></i>
-                    </button></a>
+                    </a>
                 </div>
     <?php 
     }
@@ -109,28 +109,28 @@ require'Head.php'; ?>
     //si vote + 
     ?>
                 <div class="vote" >
-                    <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>"><button type="button" class="like2 ">
+                    <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>" class="like2">
                     <?php echo $nb_likes; ?>
                         <i class="fas fa-thumbs-up"></i>
-                    </button></a>
-                    <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0"><button type="button" class="dislike">
+                    </a>
+                    <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=0" class="dislike">
                     <?php echo $nb_dislikes; ?>
                         <i class="fas fa-thumbs-down"></i>
-                    </button></a>
+                    </a>
                 </div>
     <?php 
     }
     elseif ($user_vote['vote'] == 0){    //si vote -
     ?>
                 <div class="vote" >
-                    <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1"><button type="button" class="like">
+                    <a href="vote-change.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>&amp;vote=1" class="like">
                     <?php echo $nb_likes; ?>
                         <i class="fas fa-thumbs-up"></i>
-                    </button></a>
-                    <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>"><button type="button" class="dislike2">
+                    </a>
+                    <a href="vote-supress.php?user=<?php echo $user_id; ?>&amp;acteur=<?php echo $acteur_id; ?>" class="dislike2">
                     <?php echo $nb_dislikes; ?>
                         <i class="fas fa-thumbs-down"></i>
-                    </button></a>
+                    </a>
                 </div>
     <?php
     }}
@@ -144,7 +144,7 @@ require'Head.php'; ?>
                         <summary>Laisser un commentaire</summary>
                         <form action="commente.php" method="POST">
                             <input type="hidden" name="id_acteur" value="<?php echo $acteur_id; ?>" />
-                            <textarea class="textarea" rows="5" cols="auto" name="message"></textarea>
+                            <textarea class="textarea" rows="5" name="message"></textarea>
                             <br /><input type="submit" class="boutton">
                         </form>
                     </details>
@@ -181,7 +181,6 @@ require'Head.php'; ?>
                 </div><?php }} ?>
             </div>
         
-                            </div>
-
+                            
 
 <?php require'footer.php'; ?>

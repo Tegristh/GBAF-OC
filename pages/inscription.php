@@ -67,7 +67,7 @@ require'Head.php'; ?>
            
             <div class="form-line">    
             <label for="password">Password:</label>
-                <input type="password" id="password"class="textarea" name="password" />
+                <input type="password" id="password" class="textarea" name="password" />
             <label for="verif_password">Vérification:</label>
                 <input type="password" id="verif_password"  class="textarea" name="verif_password" />
                    
@@ -123,9 +123,9 @@ require'Head.php'; ?>
                 </div>
             </div>
 
-            <div class="form-line"><button type="submit"class="boutton" >Envoyer</button>
+            <div class="form-line"><button type="submit" class="boutton" >Envoyer</button></div>
         </form>
-    </div>
+    
                         </div>
 
 <?php require'footer.php' ?>
