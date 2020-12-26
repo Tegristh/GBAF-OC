@@ -82,8 +82,30 @@ require'Head.php'; ?>
             
             <div class="form-line">
             <label for="question">Question secrète:</label>
-                <input type="text" id="question" class="textarea" name="question" />
-            <label for="reponse">Réponse à la question secrète :</label>
+                <select id="question" class="textarea" name="question" >
+                <!-- liste de questions https://gist.github.com/384400/46c7485afe0b9dc7d62c -->
+                        <option value="">-- choisir une question --</option>
+                        <option value="Comment s'appelait votre meilleur ami lorsque vous étiez adolescent ?"> Comment s'appelait votre meilleur ami lorsque vous étiez adolescent ?</option>
+                        <option value="Comment s'appelait votre premier animal de compagnie ?"> Comment s'appelait votre premier animal de compagnie ?</option>
+                        <option value="Quel est le premier plat que vous avez appris à cuisiner ?"> Quel est le premier plat que vous avez appris à cuisiner ?</option>
+                        <option value="Quel est le premier film que vous avez vu au cinéma ?"> Quel est le premier film que vous avez vu au cinéma ?</option>
+                        <option value=" Où êtes-vous allé la première fois que vous avez pris l'avion ?"> Où êtes-vous allé la première fois que vous avez pris l'avion ?</option>
+                        <option value="Comment s'appelait votre instituteur préféré à l'école primaire ?"> Comment s'appelait votre instituteur préféré à l'école primaire ?</option>
+                        <option value="Quel serait selon vous le métier idéal ?"> Quel serait selon vous le métier idéal ?</option>
+                        <option value="Quel est le livre pour enfants que vous préférez ?"> Quel est le livre pour enfants que vous préférez ?</option>
+                        <option value="Quel était le modèle de votre premier véhicule ?"> Quel était le modèle de votre premier véhicule ?</option>
+                        <option value="Quel était votre surnom lorsque vous étiez enfant ?"> Quel était votre surnom lorsque vous étiez enfant ?</option>
+                        <option value="Quel était votre personnage ou acteur de cinéma préféré lorsque vous étiez étudiant ?"> Quel était votre personnage ou acteur de cinéma préféré lorsque vous étiez étudiant ?</option>
+                        <option value="Quel était votre chanteur ou groupe préféré lorsque vous étiez étudiant ?"> Quel était votre chanteur ou groupe préféré lorsque vous étiez étudiant ?</option>
+                        <option value="Dans quelle ville vos parents se sont-ils rencontrés ?"> Dans quelle ville vos parents se sont-ils rencontrés ?</option>
+                        <option value="Comment s'appelait votre premier patron ?"> Comment s'appelait votre premier patron ?</option>
+                        <option value="Quel est le nom de la rue où vous avez grandi ?"> Quel est le nom de la rue où vous avez grandi ?</option>
+                        <option value="Quel est le nom de la première plage où vous vous êtes baigné ?"> Quel est le nom de la première plage où vous vous êtes baigné ?</option>
+                        <option value="Quel est le premier album que vous avez acheté ?"> Quel est le premier album que vous avez acheté ?</option>
+                        <option value="Quel est le nom de votre équipe de sport préférée ?"> Quel est le nom de votre équipe de sport préférée ?</option>
+                        <option value="Quel était le métier de votre grand-père ?"> Quel était le métier de votre grand-père ?</option>
+                    </select>
+                    <label for="reponse">Réponse à la question secrète :</label>
                 <input type="text" id="reponse" class="textarea" name="reponse" />
               
                 <div>
