@@ -51,7 +51,7 @@ require'Head.php';
              <div class="card" >
                 <div class="acteur-carte">
                     <div class="acteur-logo"  >
-                        <?php echo '<img src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
+                    <a href="acteur.php?acteur=<?php echo $donnees['id_acteur']; ?>"  ><?php echo '<img src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?></a>
                     </div>
                     <div class="acteur-texte"  >                                
                             <h3>
