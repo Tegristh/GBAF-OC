@@ -16,8 +16,11 @@ $req->execute(array(
     'id_user' => $user_id,
     'newPassword' => $pass_hache,
 ));
+header('refresh:1;url=param_compte.php');
 echo 'mot de passe modifié!';
 }
-else { echo'erreur, mot de passe non modifié';}
-header('Refresh:1;url=param_compte.php');
+else { 
+    header('refresh:1;url=param_compte.php');
+    echo'erreur, mot de passe non modifié';}
+
 ?>

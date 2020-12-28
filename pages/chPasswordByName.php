@@ -14,8 +14,10 @@ if ($password == $Vpassword){
         'userName' => $userName,
         'newPassword' => $pass_hache,
     ));
+    header('Refresh:1;url=connexion.php');
     echo 'mot de passe modifié!';
     }
-    else { echo'erreur, mot de passe non modifié';}
-    header('Refresh:1;url=connexion.php');
+    else {  header('Refresh:1;url=connexion.php'); 
+        echo'erreur, mot de passe non modifié';}
+    
     ?>
