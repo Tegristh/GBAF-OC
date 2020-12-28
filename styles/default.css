@@ -19,6 +19,13 @@ body {
     flex-flow: column nowrap;
     background-color: #212121;
 }
+h1 {
+    color:#ff6666;
+    text-align: center;
+    font-size: 30px;
+   
+   
+} 
 h2 {
     color:#ff6666;
     text-align: center;

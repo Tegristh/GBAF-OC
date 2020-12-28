@@ -14,7 +14,7 @@ require'Head.php';
     <!-- début partie présentation -->
     <div class="big-box">
     <div class="presentation">
-        <h2>Le Groupement Banque Assurance Français</h2>
+        <h1>Le Groupement Banque Assurance Français</h1>
         <p> est une fédération représentant les 6 grand groupes Français:</p>
        <ul id="liste-banques"><!-- Les commentaires servent à supprimer l'espace blanc indésirable, visible sur certaines mises en forme
        https://www.creativejuiz.fr/blog/tutoriels/creer-menu-horizontal-centre-css-sans-javascript

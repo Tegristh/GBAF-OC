@@ -20,9 +20,9 @@ require'Head.php'; ?>
                 <?php echo '<img src="http://gbaf.tegristh.fr/img/part/'.$donnees['id_acteur'].'.'.$donnees['logo'].'" alt="logo">'; ?>
             </div>
             <div>
-                <h2>
+                <h1>
                     <?php echo $donnees['acteur'] ?>
-                </h2>
+                </h1>
             </div>             
             <?php $req->closeCursor(); ?>             
             <div>
