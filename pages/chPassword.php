@@ -5,7 +5,6 @@ require'bdd_connect.php';
 $user_id = $_SESSION['id'];
 $password = $_POST['password'];
 $verifPassword = $_POST['Vpassword'];
-
 //verif validité du password
 if ($password == $verifPassword){
 //hash password
@@ -22,5 +21,4 @@ echo 'mot de passe modifié!';
 else { 
     header('refresh:1;url=param_compte.php');
     echo'erreur, mot de passe non modifié';}
-
 ?>

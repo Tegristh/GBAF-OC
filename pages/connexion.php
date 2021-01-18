@@ -24,7 +24,6 @@ require'Head.php'; ?>
                 }?>
         </div>
     </div>
-
     <div>
     <form action="connexionMembre.php" method="POST" >
                 <div class="form-line">
@@ -45,7 +44,4 @@ require'Head.php'; ?>
             <div class="grey-box"><a href="recuppwd.php">j'ai oublié mon mot de passe</a></div>
         </div>
     </div>
-
-
-
 <?php require'footer.php' ?>

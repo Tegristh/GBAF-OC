@@ -16,8 +16,5 @@ require'Head.php'; ?>
         <button type="submit" class="boutton">Modifier</button>
     </form>
 </div>
-   
-
-
 <?php 
 require'footer.php'; ?>

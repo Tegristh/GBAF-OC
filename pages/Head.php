@@ -20,23 +20,17 @@
                 $redirect= 'http://localhost/GBAF-OC/';
                 }
             ?>
- 
-
             <a class="navbar" href="<?php echo $redirect.'index.php'; ?>">
                 <img src="http://gbaf.tegristh.fr/img/bq/LOGOGBAF.png" width="80" height="102" alt="site logo">
             </a>
         </div>
-       
-                <?php
-                    if (isset($_SESSION['nom']) AND isset($_SESSION['prenom'])) {
-                        echo ' <div class="user">';
-                        echo '<div ><a href="param_compte.php" title="profil"><i class="fas fa-user"></i></a></div><div >';
-                        echo ucfirst($_SESSION['prenom']).' '.strtoupper($_SESSION['nom']) ;
-                        echo '</div><div class="deconnecter"><a href="deconnect.php" title="Se déconnecter!"><i class="far fa-times-circle"></i></a></div>';
-                        echo ' </div>';
-                    }
-                     ?>
-            
-
-       
+            <?php
+                if (isset($_SESSION['nom']) AND isset($_SESSION['prenom'])) {
+                    echo ' <div class="user">';
+                    echo '<div ><a href="param_compte.php" title="profil"><i class="fas fa-user"></i></a></div><div >';
+                    echo ucfirst($_SESSION['prenom']).' '.strtoupper($_SESSION['nom']) ;
+                    echo '</div><div class="deconnecter"><a href="deconnect.php" title="Se déconnecter!"><i class="far fa-times-circle"></i></a></div>';
+                    echo ' </div>';
+                };
+             ?>
         </header>

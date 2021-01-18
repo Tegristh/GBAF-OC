@@ -1,6 +1,6 @@
  <!-- début footer -->
- </div><footer>
-        
+ </div>
+    <footer>
         <div>
             <p>
                 | 
@@ -10,14 +10,8 @@
                 |
             </p>
         </div>
-    
-        </footer>
-        </div>
-    <!-- fin footer -->
-
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-
+    </footer>
+</div>
+<!-- fin footer -->
 </body>
 </html>

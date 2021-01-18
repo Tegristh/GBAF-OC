@@ -58,18 +58,6 @@ if ($password == $verifPassword){
 else {
     $validPassword = FALSE;
 }
-
-/*//verification format email
-if (preg_match('#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#', $email)){
-    $validMail = TRUE;
-}
-else {
-    $validMail = FALSE;
-}
-*/
-
-
-
 // Vérification de la validité des informations
 if (    ($usedPseudo == TRUE)
      OR ($emptyLName == TRUE)
@@ -100,7 +88,7 @@ $req->execute(array(
     'prenom' =>htmlspecialchars($prenom),
     'username' => htmlspecialchars($pseudo),
     'pass' => $pass_hache,
-    'question' => htmlspecialchars($question),
+    'question' => $question,
     'reponse' => htmlspecialchars($reponseQuestion) ));
 
 

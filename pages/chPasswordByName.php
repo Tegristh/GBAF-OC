@@ -19,5 +19,4 @@ if ($password == $Vpassword){
     }
     else {  header('Refresh:1;url=connexion.php'); 
         echo'erreur, mot de passe non modifié';}
-    
     ?>

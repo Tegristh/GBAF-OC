@@ -161,7 +161,6 @@ ul li img {
     justify-self: end;
     align-self: end;
 }
-
 .boutton{
     margin:10px ;
     border-radius:12px 0 12px 0;
@@ -173,7 +172,6 @@ ul li img {
 	padding:6px 10px 6px 10px;
 }
 .boutton:hover{
-    
     border-radius:12px 0 12px 0;
 	background: #d34836;
 	border:none;
@@ -182,7 +180,7 @@ ul li img {
 	padding:6px 10px 6px 10px;
 }
 /*like /dislike*/
-.dislike{
+.dislike {
     font-size: 18px;
     margin:10px 5px 0px 0px;
     border-radius: 0px 12px 12px 0px;
@@ -195,19 +193,16 @@ ul li img {
     bottom: 5px;
 	padding:6px 20px 6px 20px;
 }
-.dislike:hover{
+.dislike:hover {
     cursor: pointer;
     margin:10px 5px 0px 0px;
-    
-	background: #FF6666;
+    background: #FF6666;
     border:3px solid #fff;
-    
-	color:#fff;
+    color:#fff;
     font:bold 12px Verdana;
     padding:6px 20px 6px 20px;
-
 }
-.dislike2{
+.dislike2 {
     cursor: pointer;
     margin:10px 0px 0px 5px;
     border-radius: 0px 12px 12px 0px;
@@ -221,9 +216,8 @@ ul li img {
 	color:#FFF;
     font:bold 12px Verdana;
     padding:6px 20px 6px 20px;
-	
 }
-.like{
+.like {
     margin:10px 0px 0px 5px;
     border-radius:12px 0px 0px 12px;
 	background: #191919;
@@ -236,15 +230,12 @@ ul li img {
     bottom: 5px;
 	padding:6px 20px 6px 20px;
 }
-.like:hover{
+.like:hover {
     cursor: pointer;
     margin:10px 0px 0px 5px;
-   
 	background: #6F6;
     border:3px solid #FFF;    
-    
-    
-	color:#FFF;
+    color:#FFF;
 	font:bold 12px Verdana;
     padding:6px 20px 6px 20px;
 }
@@ -281,10 +272,7 @@ footer div {
 /*page acteur*/
 .presentation-acteur img{
     margin:auto;
-   
-    border-radius: 20%;
-   
-   
+   border-radius: 20%;
 }
 .interact{
     background-color: #191919;
@@ -473,15 +461,12 @@ em{
     position: relative;
     overflow: hidden;
 }
-
 /* Tablette */
 @media (min-width:768px) and (max-width:991px){
     ul li img {
-    
     width: 13vw;
     height: 13vw;
-    
-}
+    }
     .main-content {  
         max-width:90vw; 
     }
@@ -501,7 +486,6 @@ em{
         justify-content: center;
     }
     .acteur-logo {
-        
         grid-column: 1;
         grid-row:1;
     }
@@ -511,50 +495,42 @@ em{
         grid-row:1;
     }
     .bottom-right {
-       
-        grid-column: 2;
-        grid-row:2;       
+       grid-column: 2;
+       grid-row:2;       
     }
    
     .presentation-acteur div img {
-        width:700px;
+       width:700px;
     }    
 
 .interact{
-    
     display:grid;
     grid-template-columns:50% 50%;
     grid-template-rows: auto auto;
-}
+    }
 .nb_commentaires{
     grid-row: 1;
     grid-column: 1;
    
-}
+    }
 .satisfaction{
     grid-row: 2;
     grid-column: 2;
-   
-}
+    }
 .vote{
     grid-row: 1;
     grid-column:2;
-    
-}
+    }
 .commenter{
-    
     grid-row: 2;
     grid-column:1;    
-   
-}
+    }
 }
 /* Mobile */
 @media (min-width:0px) and (max-width:767px) {
     ul li img {
-    
         width: 13vw;
         height: 13vw;
-        
     }
     .main-content {  
         max-width:90vw; 
@@ -578,7 +554,6 @@ em{
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
         margin: 10px;
-        
     }
     .acteur-logo img {
        grid-column: 1; 
@@ -595,32 +570,25 @@ em{
     .presentation-acteur div img {
         width:80vw;
     }
-
-.interact{
-    
+    .interact{
     display:grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto ;
-}
-.nb_commentaires{
+    }
+    .nb_commentaires{
     grid-row: 1;
     grid-column: 1;
-    
-}
+    }
 .satisfaction{
     grid-row: 4;
     grid-column: 1;
-    
-}
+    }
 .vote{
     grid-row: 3;
     grid-column: 1;
-    
-}
+    }
 .commenter{
-   
     grid-row: 2;
-    grid-column:1;    
-  
-}
+    grid-column:1;
+    }
 }
